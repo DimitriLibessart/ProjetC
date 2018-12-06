@@ -14,7 +14,7 @@ namespace ProjetSalle.Controller
         public Controller()
         { 
         }
-        public void addCustumer()
+        public void addCustumers()
         {
 
         }

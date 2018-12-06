@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    interface IRowChief
+    class Vaiselle
     {
-
-     
-
+        public Vaiselle()
+        {
+        }
     }
 }

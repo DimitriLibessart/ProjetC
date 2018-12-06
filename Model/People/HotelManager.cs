@@ -20,8 +20,9 @@ namespace ProjetSalle.Model.People
         {
             
         }
+        public 
 
-        public void appelChef()
+        public void CallRowChief()
         {
 
         }

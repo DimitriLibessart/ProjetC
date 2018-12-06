@@ -14,5 +14,19 @@ namespace ProjetSalle.View
 
 
         }
+        public void addGroup()
+        {
+
+        }
+        public void createSimulation()
+        {
+
+        }
+        public void creteFields()
+        {
+
+        }
+
     }
 }
+ 

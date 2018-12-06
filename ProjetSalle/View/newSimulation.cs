@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.Model
+namespace ProjetSalle.View
 {
-    interface IRowChief
+    class newSimulation
     {
-
-     
-
     }
 }

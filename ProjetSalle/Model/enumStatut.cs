@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    interface IRowChief
+   enum enumStatut
     {
 
-     
-
+        Propre,
+        Utilisé,
+        Sale,
+        Attente,
     }
 }

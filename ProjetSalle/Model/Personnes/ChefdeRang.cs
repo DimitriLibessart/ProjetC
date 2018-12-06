@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    interface IRowChief
+    class Chef_de_rang
     {
-
-     
-
     }
 }

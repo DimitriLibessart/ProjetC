@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.Model
+namespace ProjetSalle.Controller
 {
-    interface IRowChief
+    class Main
     {
-
-     
-
+        Controller controller;
     }
 }
