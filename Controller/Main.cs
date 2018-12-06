@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.Model
+namespace ProjetSalle.Controller
 {
-    class Commis_salle
+    class Main
     {
+        Controller controller;
     }
 }

@@ -4,12 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.Model
+namespace ProjetSalle.Model.People
 {
-    class Vaiselle
+    class Server
     {
-        public Vaiselle()
+        private List<> listePorte;
+
+        public Server ()
         {
+
         }
+    
     }
 }

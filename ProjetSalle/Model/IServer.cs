@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.Controller
+namespace ProjetSalle.Model
 {
-    class Pause
+    interface IServer
     {
     }
 }

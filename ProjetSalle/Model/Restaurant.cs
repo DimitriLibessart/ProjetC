@@ -8,5 +8,10 @@ namespace ProjetSalle.Model
 {
     class Restaurant
     {
+        public Restaurant()
+        {
+
+
+        }
     }
 }

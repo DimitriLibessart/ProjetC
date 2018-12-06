@@ -8,5 +8,11 @@ namespace ProjetSalle.View
 {
     class newSimulation
     {
+
+        public newSimulation()
+        {
+
+
+        }
     }
 }

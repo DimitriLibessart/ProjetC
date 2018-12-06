@@ -8,5 +8,12 @@ namespace ProjetSalle.View
 {
     class Field
     {
+
+        public Field()
+
+        {
+
+
+        }
     }
 }

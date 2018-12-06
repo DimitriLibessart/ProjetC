@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    interface IStatutTable
+    class SocketDishwashing
     {
+
+    public SocketDishwashing()
+        {
+
+        }
     }
 }

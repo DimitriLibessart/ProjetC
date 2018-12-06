@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    class Socket_Plonge
+    class SokcetOrder
     {
     }
 }

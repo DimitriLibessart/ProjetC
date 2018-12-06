@@ -8,5 +8,15 @@ namespace ProjetSalle.Controller
 {
     class Play
     {
+
+        public Play()
+        {
+
+
+        }
+        public start()
+        {
+
+        }
     }
 }

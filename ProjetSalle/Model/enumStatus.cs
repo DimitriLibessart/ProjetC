@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    interface IChefdeRang
+   enum enumStatus
     {
+
+        Clean,
+        Used,
+        Soiled,
+        Wait,
     }
 }

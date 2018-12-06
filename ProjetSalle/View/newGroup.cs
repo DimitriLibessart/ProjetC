@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.Model
+namespace ProjetSalle.View
 {
-    class Chef_de_rang
+    class newGroup
     {
+        public newGroup()
+
+        {
+
+
+        }
     }
 }

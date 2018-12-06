@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.Model
+namespace ProjetSalle.Model.people
 {
-    interface IClientGroup
+    class RoomClerk //Commis_salle
     {
+        public RoomClerk()
+        {
+
+        }
     }
 }

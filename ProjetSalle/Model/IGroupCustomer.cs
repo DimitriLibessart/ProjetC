@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    class Socket_Plat
+    interface IGroupCustomer
+
     {
     }
 }

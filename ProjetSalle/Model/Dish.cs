@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle
 {
-    class Plat
+    class Dish
     {
-         string Category;
-         int Price;
-         string Nom;
-        //statutPlat = StatutPlat;
-        public Plat()
+        string Category;
+        int Price;
+        string Name;
+        StatusDish statusDish;
+        public Dish()
         {
-          
+            
         }
-        void GetRecette(string nomRecette)
+        void GetRecipe(string nameRecipe)
         {
           
         }

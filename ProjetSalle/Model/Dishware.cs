@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    interface ICommisSalle
+    class Dishware
     {
+
+        public Dishware()
+        {
+
+
+        }
     }
 }

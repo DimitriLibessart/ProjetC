@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    interface IServeur
+    interface IRoomClerk
     {
     }
 }

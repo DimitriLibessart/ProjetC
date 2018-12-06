@@ -4,29 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.View
+namespace ProjetSalle.Model.People
 {
-    class View
+    class RowChief //chef de rang
     {
+        bool available;
 
-        public View()
-        {
-
-
-        }
-        public void addGroup()
-        {
-
-        }
-        public void createSimulation()
-        {
-
-        }
-        public void creteFields()
+        public RowChief()
         {
 
         }
 
+        public PlaceCustomer()
+        {
+
+
+        }
+
+        public PresentSetMeal()
+        {
+
+        }
+
+        public 
     }
 }
- 

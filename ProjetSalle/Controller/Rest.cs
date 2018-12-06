@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.View
+namespace ProjetSalle.Controller
 {
-    class newGroupe
+    class Rest
     {
+
+        public Rest()
+        {
+
+        }
+     
     }
 }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    class Socket_Commande
+    interface IRowChief
     {
+
+     
+
     }
 }

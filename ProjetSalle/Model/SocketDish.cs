@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.Model.Personnes
+namespace ProjetSalle.Model
 {
-    class MaitreHôtel
+    class SocketDish
     {
+
+        public SocketDish()
+        {
+
+        }
     }
 }
