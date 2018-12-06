@@ -20,11 +20,26 @@ namespace ProjetSalle.Model.People
         {
 
         }
-        public
+        public void ReceiveCustomer()
+        {
+
+        }
 
         public void CallRowChief()
         {
 
         }
+
+        public void AssignTable()
+        {
+
+        }
+
+        public void CheckReservation()
+        {
+
+
+        }
+
     }
 }

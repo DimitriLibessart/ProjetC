@@ -16,5 +16,7 @@ namespace ProjetSalle
             this.listOrder = listOrder;
             //listePlat.Add(new Plat());
         }
+
     }
+
 }

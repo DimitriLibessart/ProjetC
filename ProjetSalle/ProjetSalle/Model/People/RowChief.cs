@@ -9,23 +9,44 @@ namespace ProjetSalle.Model.People
     class RowChief //chef de rang
     {
         bool available;
+        
 
         public RowChief()
         {
 
         }
 
-        public PlaceCustomer()
+        public void PlaceCustomer()
         {
 
 
         }
 
-        public PresentSetMeal()
+        public void PresentSetMeal()
         {
 
         }
 
-        public
+        public void SetCloth()
+        {
+
+        }
+
+        public void TakeOrder()
+        {
+
+        }
+        public void GiveOrder()
+        {
+
+
+        }
+
+        public void RegainOrder()
+        {
+
+
+        }
     }
+
 }
