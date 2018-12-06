@@ -4,12 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.Model.Personnes
+namespace ProjetSalle.Model.People
 {
-    class HotelManager
+    sealed class HotelManager
     {
+        private HotelManager instance = null;
+        public HotelManager getInstance()
+        {
+            if (instance == null)
+                instance = new HotelManager();
+            return instance;
+        }
 
-        public HotelManager()
+        private HotelManager()
+        {
+            
+        }
+
+        public void appelChef()
         {
 
         }

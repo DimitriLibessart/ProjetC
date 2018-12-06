@@ -8,7 +8,17 @@ namespace ProjetSalle.Controller
 {
     class Controller
     {
+        Model model;
+        View view;
+
         public Controller()
+        { 
+        }
+        public void addCustumer()
+        {
+
+        }
+        public void CreateRestaurant()
         {
 
 

@@ -11,10 +11,10 @@ namespace ProjetSalle
         string Category;
         int Price;
         string Name;
-        statusDish = StatusDish;
+        StatusDish statusDish;
         public Dish()
         {
-          
+            
         }
         void GetRecipe(string nameRecipe)
         {

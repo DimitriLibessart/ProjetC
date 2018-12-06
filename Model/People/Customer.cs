@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle
+namespace ProjetSalle.Model.People
 {
     class Customer //client
     {
