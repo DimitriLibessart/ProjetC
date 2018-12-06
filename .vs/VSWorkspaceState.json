@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Application",
-    "\\Controller",
-    "\\Model",
-    "\\Model\\People",
-    "\\View"
+    "\\ProjetSalle"
   ],
-  "SelectedNode": "\\Controller\\Play.cs",
   "PreviewInSolutionExplorer": false
 }
