@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.View
 {
-    interface Interface1
+    interface IModel
     {
     }
 }

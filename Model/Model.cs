@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    class Class1
+    class Model
     {
+        public Model()
+        {
+
+
+        }
     }
 }

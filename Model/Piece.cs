@@ -8,5 +8,11 @@ namespace ProjetSalle.Model
 {
     class Piece
     {
+
+        public Piece()
+        {
+
+
+        }
     }
 }

@@ -8,5 +8,10 @@ namespace ProjetSalle.Controller
 {
     class Controller
     {
+        public Controller()
+        {
+
+
+        }
     }
 }
