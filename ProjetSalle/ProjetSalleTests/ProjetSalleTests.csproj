@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{54383260-636D-4296-8717-15619A19F899}</ProjectGuid>
+    <ProjectGuid>{9F938B42-B796-46AE-BB3D-80F05CDAFD47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProjetSalleTest</RootNamespace>
-    <AssemblyName>ProjetSalleTest</AssemblyName>
+    <RootNamespace>ProjetSalleTests</RootNamespace>
+    <AssemblyName>ProjetSalleTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

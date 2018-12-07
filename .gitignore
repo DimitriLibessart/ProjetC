@@ -3,6 +3,8 @@
 ################################################################################
 
 /ProjetSalle/.vs/ProjetSalle/v15
-/vs
+/.vs/slnx.sqlite
 /ProjetSalle/ProjetSalle/obj
 /ProjetSalle/ProjetSalleTest/obj
+.gitignore.txt
+/.vs/slnx.sqlite-journal

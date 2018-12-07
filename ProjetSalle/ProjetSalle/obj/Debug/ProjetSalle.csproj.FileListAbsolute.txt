@@ -7,4 +7,12 @@ C:\Users\Dimitri\Documents\A3\Projet C#\Git\ProjetSalle\ProjetSalle\bin\Debug\Pr
 C:\Users\Dimitri\Documents\A3\Projet C#\Git\ProjetSalle\ProjetSalle\bin\Debug\ProjetSalle.pdb
 C:\Users\Dimitri\Documents\A3\Projet C#\Git\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.exe
 C:\Users\Dimitri\Documents\A3\Projet C#\Git\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.pdb
-C:\Users\Dimitri\Documents\A3\Projet C#\Git\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.Form1.resources
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\bin\Debug\ProjetSalle.exe.config
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\bin\Debug\ProjetSalle.exe
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\bin\Debug\ProjetSalle.pdb
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csprojAssemblyReference.cache
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.Properties.Resources.resources
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csproj.GenerateResource.cache
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csproj.CoreCompileInputs.cache
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.exe
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.pdb
