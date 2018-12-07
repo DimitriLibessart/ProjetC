@@ -7,10 +7,10 @@
     "\\ProjetSalle\\ProjetSalleTest\\bin",
     "\\ProjetSalle\\ProjetSalleTest\\bin\\Debug",
     "\\ProjetSalle\\ProjetSalleTest\\bin\\Release",
-    "\\ProjetSalle\\ProjetSalleTest\\obj",
+    "\\ProjetSalle\\ProjetSalle\\Controller",
     "\\ProjetSalle\\ProjetSalle\\Model",
     "\\ProjetSalle\\ProjetSalle\\Model\\People"
   ],
-  "SelectedNode": "\\ProjetSalle\\ProjetSalle\\Form1.cs",
+  "SelectedNode": "\\ProjetSalle\\ProjetSalle\\Controller\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
