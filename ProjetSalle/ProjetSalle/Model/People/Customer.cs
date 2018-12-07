@@ -15,12 +15,12 @@ namespace ProjetSalle.Model.People
         {
             this.numTable = numTable;
         }
-        public Arrived()
+        public void Arrived()
         {
             Console.WriteLine("Customer: I'm here");
         }
 
-        public TakeOrder()
+        public void TakeOrder()
         {
 
         }

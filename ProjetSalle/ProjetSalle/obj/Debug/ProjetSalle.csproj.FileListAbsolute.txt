@@ -1,0 +1,4 @@
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csprojAssemblyReference.cache
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.Properties.Resources.resources
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csproj.GenerateResource.cache
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csproj.CoreCompileInputs.cache
