@@ -11,7 +11,7 @@ namespace ProjetSalle
         string Category;
         int Price;
         string Name;
-        statusDish StatusDish;
+        // statusDish StatusDish;
         public Dish()
         {
 

@@ -9,18 +9,20 @@ namespace ProjetSalle.Model.People
     class Customer //client
     {
         int numTable;
-        int Order = Order;
+        //int Order = Order;
 
         public Customer(int numTable)
         {
             this.numTable = numTable;
         }
-        public Arrived()
+        static void Arrived()
         {
+            for (int i = 0; i<1000; i++){
             Console.WriteLine("Customer: I'm here");
         }
+            }
 
-        public TakeOrder()
+        public void TakeOrder()
         {
 
         }
