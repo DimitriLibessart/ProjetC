@@ -1,14 +1,18 @@
 ﻿using System;
+using ProjetSalle.Model.People;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ProjetSalleTests
+namespace ProjetSalleTest
 {
     [TestClass]
     public class CustomerTest
     {
+
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethodArrived()
         {
+            
+
         }
     }
 }
