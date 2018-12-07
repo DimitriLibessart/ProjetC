@@ -7,3 +7,4 @@ C:\Users\Dimitri\Documents\A3\Projet C#\Git\ProjetSalle\ProjetSalle\bin\Debug\Pr
 C:\Users\Dimitri\Documents\A3\Projet C#\Git\ProjetSalle\ProjetSalle\bin\Debug\ProjetSalle.pdb
 C:\Users\Dimitri\Documents\A3\Projet C#\Git\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.exe
 C:\Users\Dimitri\Documents\A3\Projet C#\Git\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.pdb
+C:\Users\Dimitri\Documents\A3\Projet C#\Git\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.Form1.resources
