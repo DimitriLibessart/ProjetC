@@ -8,7 +8,7 @@ namespace ProjetSalle.Model.People
 {
     class Server
     {
-        private List<> listePorte;
+        //private List<> listePorte;
 
         public Server()
         {

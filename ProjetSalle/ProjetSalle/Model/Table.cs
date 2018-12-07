@@ -9,7 +9,7 @@ namespace ProjetSalle.Model
     class Table
     {
         int NumTable;
-        GroupCustomer group;
+        //GroupCustomer group;
 
         public Table()
         {
