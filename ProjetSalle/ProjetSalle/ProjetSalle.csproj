@@ -82,7 +82,6 @@
     <Compile Include="Model\SocketDishWashing.cs" />
     <Compile Include="Model\SocketOrder.cs" />
     <Compile Include="Model\Table.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Field.cs" />
     <Compile Include="View\IView.cs" />
