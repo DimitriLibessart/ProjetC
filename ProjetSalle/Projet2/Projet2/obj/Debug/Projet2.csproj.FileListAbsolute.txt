@@ -1,0 +1,10 @@
+C:\Users\Kisuke\source\repos\Projet2\Projet2\bin\Debug\Projet2.exe.config
+C:\Users\Kisuke\source\repos\Projet2\Projet2\bin\Debug\Projet2.exe
+C:\Users\Kisuke\source\repos\Projet2\Projet2\bin\Debug\Projet2.pdb
+C:\Users\Kisuke\source\repos\Projet2\Projet2\obj\Debug\Projet2.Form1.resources
+C:\Users\Kisuke\source\repos\Projet2\Projet2\obj\Debug\Projet2.Properties.Resources.resources
+C:\Users\Kisuke\source\repos\Projet2\Projet2\obj\Debug\Projet2.csproj.GenerateResource.cache
+C:\Users\Kisuke\source\repos\Projet2\Projet2\obj\Debug\Projet2.csproj.CoreCompileInputs.cache
+C:\Users\Kisuke\source\repos\Projet2\Projet2\obj\Debug\Projet2.exe
+C:\Users\Kisuke\source\repos\Projet2\Projet2\obj\Debug\Projet2.pdb
+C:\Users\Kisuke\source\repos\Projet2\Projet2\obj\Debug\Projet2.csprojAssemblyReference.cache
