@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjetSalle.Properties
+namespace Projet2.Properties
 {
 
 
