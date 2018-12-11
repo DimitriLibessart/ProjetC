@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDD\Commands.cs" />
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\Main.cs" />
@@ -76,7 +77,6 @@
     <Compile Include="Model\People\Server.cs" />
     <Compile Include="Model\Piece.cs" />
     <Compile Include="Model\Restaurant.cs" />
-    <Compile Include="Model\RoomClerk.cs" />
     <Compile Include="Model\SocketDish.cs" />
     <Compile Include="Model\SocketDishWashing.cs" />
     <Compile Include="Model\SocketOrder.cs" />
