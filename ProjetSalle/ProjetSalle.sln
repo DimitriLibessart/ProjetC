@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetSalleTests", "ProjetS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config_Folder", "Config_Folder", "{55FCA47E-0056-4719-9796-12F6BEB68179}"
 	ProjectSection(SolutionItems) = preProject
+		Commands.json = Commands.json
 		Config.json = Config.json
 	EndProjectSection
 EndProject

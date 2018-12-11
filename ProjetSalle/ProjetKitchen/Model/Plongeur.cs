@@ -35,7 +35,7 @@ namespace ProjetKitchen.Model
 
         private void CheckDispoLavage(String typeElement)
         {
-            
+            //DirtyDishies.add(); 
         }
 
         private void Laver(String typeElement, List<Dish> aLaver)
@@ -46,7 +46,6 @@ namespace ProjetKitchen.Model
                 case "Vaiselle":
 
                     aLaver = GetDishiestoDishWasher(aLaver);
-                    InitKitchen.UseWashingMachine(aLaver);
                     break; 
 
                 case "Linge":
