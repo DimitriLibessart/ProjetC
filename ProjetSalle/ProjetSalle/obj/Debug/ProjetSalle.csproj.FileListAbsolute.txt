@@ -22,3 +22,9 @@ C:\Users\theo\OneDrive\EXIA\A3\Projets_A3\Projet_Prog_Système\dev_file\ProjetC-
 C:\Users\theo\OneDrive\EXIA\A3\Projets_A3\Projet_Prog_Système\dev_file\ProjetC-\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csproj.CoreCompileInputs.cache
 C:\Users\theo\OneDrive\EXIA\A3\Projets_A3\Projet_Prog_Système\dev_file\ProjetC-\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.exe
 C:\Users\theo\OneDrive\EXIA\A3\Projets_A3\Projet_Prog_Système\dev_file\ProjetC-\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.pdb
+C:\Users\Dimitri\Documents\A3\Projet C#\git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csprojAssemblyReference.cache
+C:\Users\Dimitri\Documents\A3\Projet C#\git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.Properties.Resources.resources
+C:\Users\Dimitri\Documents\A3\Projet C#\git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csproj.GenerateResource.cache
+C:\Users\Dimitri\Documents\A3\Projet C#\git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csproj.CoreCompileInputs.cache
+C:\Users\Dimitri\Documents\A3\Projet C#\git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.exe
+C:\Users\Dimitri\Documents\A3\Projet C#\git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.pdb
