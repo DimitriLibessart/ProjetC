@@ -9,5 +9,7 @@
 
         public ElementStatus StatusDish { get; set; }
 
+        public int CleaningTime { get; set; }
+
     }
 }

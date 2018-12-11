@@ -17,5 +17,6 @@ namespace ProjetKitchen.Model
         {
             Console.WriteLine("Washing Machine is ready to be used");
         }
+
     }
 }

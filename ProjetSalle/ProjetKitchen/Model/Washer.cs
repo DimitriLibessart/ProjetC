@@ -35,11 +35,13 @@ namespace ProjetKitchen.Model
 
         private void WasherWork()
         {
+            Washer.Available = false;
             // While the thread is alive
             while (Thread.CurrentThread.IsAlive)
             {
                 Thread.Sleep(WasherTime);
             }
+            Washer.Available = true;
         }
     }
 }
