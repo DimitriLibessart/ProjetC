@@ -12,13 +12,8 @@ namespace ProjetKitchen.Model
 
         public List<Dish> DirtyDishies { get; set; }
 
-        // TypeElement { Vaiselle, Linge, Ustencils};
-        private readonly String typeElement = "Vaiselle";
-
-
-        public Plongeur(String typeElement)
+        public Plongeur(String typeElement = "Vaiselle") // TypeElement { Vaiselle, Linge, Ustencils};
         {
-
             GetVaisselle();
             CheckDispoLavage();
 
@@ -51,7 +46,7 @@ namespace ProjetKitchen.Model
                 case "Vaiselle":
 
                     aLaver = GetDishiestoDishWasher(aLaver);
-                    InitKitchen..UseWashingMachine(aLaver);
+                    InitKitchen.UseWashingMachine(aLaver);
                     break; 
 
                 case "Linge":

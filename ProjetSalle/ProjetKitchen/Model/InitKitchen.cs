@@ -9,17 +9,26 @@ namespace ProjetKitchen.Model
 {
     class InitKitchen
     {
-        InitKitchen()
+        private static InitKitchen _instance;
+        static readonly object instanceLock = new object();
+
+        private static WashingMachine washingMachine;
+        private static Dishwasher dishwasher;
+        private static UtencilWasher utencilWasher;
+
+        private static ChefCuisine chefCuisine;
+
+        private InitKitchen()
         {
 
             /* Initialisation of the washing  machines
              */
-            WashingMachine washingMachine = new WashingMachine();
-            Dishwasher dishwasher = new Dishwasher();
-            UtencilWasher utencilWasher = new UtencilWasher();
+            washingMachine = new WashingMachine();
+            dishwasher = new Dishwasher();
+            utencilWasher = new UtencilWasher();
 
             // Initialisation of the Kitchen Chef
-            ChefCuisine chefCuisine = new ChefCuisine();
+            chefCuisine = new ChefCuisine();
 
             Config config = new Config();
 
@@ -42,6 +51,23 @@ namespace ProjetKitchen.Model
                 Plongeur plongeur = new Plongeur() { ID = p };
             }
 
+        }
+
+        // If no instance of the kitchen, then, create one
+        public static InitKitchen Instance
+        {
+            get
+            {
+                if (_instance == null) //Les locks prennent du temps, il est préférable de vérifier d'abord la nullité de l'instance.
+                {
+                    lock (instanceLock)
+                    {
+                        if (_instance == null) //on vérifie encore, au cas où l'instance aurait été créée entretemps.
+                            _instance = new InitKitchen();
+                    }
+                }
+                return _instance;
+            }
         }
 
     }
