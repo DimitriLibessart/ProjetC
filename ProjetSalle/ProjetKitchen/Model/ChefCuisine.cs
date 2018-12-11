@@ -7,24 +7,60 @@ namespace ProjetKitchen.Model
 {
     class ChefCuisine
     {
-        public List<Recettes> Orders { get; set; }
+        private static ChefCuisine _instance;
+        static readonly object instanceLock = new object();
+
+        //List of Commands arrived
+        public List<String> Orders { get; set; } = new List<String> {"test1", "test1", "test1" };
+
+        public List<Recettes> OrdersArrived { get; set; } 
+
+        public List<Recettes> RecettesList { get; set; } 
+
+        
+
+
+        //Class Config JSON
+        public Config KitchenOrder { get; set; }
+
+
+        //Singleton 
+        private ChefCuisine()
+        {
+        }
 
         /*
          * Get the list of Orders 
          * Verif the Availability of Ingrédients
          */
-        public ChefCuisine()
+        public void ChefCuisineActions()
         {
             /*
-            private Recettes Order;
-
             GetCommandFromRestaurant();
 
-            foreach(Order in Orders)
+            foreach(Order in RestaurantOrders)
             {
                 if( VerifIngredient(Order) )
                 {
                     AlarmIngredientNotAvailable();
+                }
+            }
+            DisplayOrders();
+            */
+        }
+
+        private void DisplayOrders()
+        {
+            /*
+            int nbrCuisinier = KitchenOrder.KitchenConf.Cuisiner ;
+
+            foreach (Recettes recette in Order)
+            {
+                foreach (Cooker cook in List<Cooker>) {
+                    if (cook.ID == nbrCuisinier % nbrCuisinier)
+                    {
+                        cook.TravailList.Add(recette);
+                    }
                 }
             }
             */
@@ -38,6 +74,17 @@ namespace ProjetKitchen.Model
         {
             //Get the Command List from the JSON or BDD
             //commands = 
+
+            foreach (String Recette in Orders)
+            {
+                foreach (Recettes recetteAsk in RecettesList)
+                {
+                    if (recetteAsk.RecetteName == Recette)
+                    {
+                        OrdersArrived.Add(recetteAsk);
+                    }
+                }
+            }
         }
 
         /*
@@ -63,6 +110,23 @@ namespace ProjetKitchen.Model
         private void AlarmIngredientNotAvailable()
         {
             //envoi un message au serveur pour lui demander une nouvelle commande
+        }
+
+        // If no instance of the kitchen, then, create one
+        public static ChefCuisine Instance
+        {
+            get
+            {
+                if (_instance == null) //Les locks prennent du temps, il est préférable de vérifier d'abord la nullité de l'instance.
+                {
+                    lock (instanceLock)
+                    {
+                        if (_instance == null) //on vérifie encore, au cas où l'instance aurait été créée entretemps.
+                            _instance = new ChefCuisine();
+                    }
+                }
+                return _instance;
+            }
         }
     }
 }
