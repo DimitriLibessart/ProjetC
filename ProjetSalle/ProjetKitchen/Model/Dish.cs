@@ -1,7 +1,7 @@
 ﻿namespace ProjetKitchen.Model
 {
 
-    class Dish
+    public class Dish
     {
         public string Name { get; set; }
 

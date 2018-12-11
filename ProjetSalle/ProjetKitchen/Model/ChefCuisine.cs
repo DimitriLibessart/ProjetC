@@ -10,33 +10,49 @@ namespace ProjetKitchen.Model
         private static ChefCuisine _instance;
         static readonly object instanceLock = new object();
 
-        private List<Recettes> Order;
+        //List of Commands arrived
+        public List<String> Orders { get; set; } = new List<String> {"test1", "test1", "test1" };
+
+        public List<Recettes> OrdersArrived { get; set; } 
+
+        public List<Recettes> RecettesList { get; set; } 
+
+        
+
+
+        //Class Config JSON
+        public Config KitchenOrder { get; set; }
+
+
+        //Singleton 
+        private ChefCuisine()
+        {
+        }
 
         /*
          * Get the list of Orders 
          * Verif the Availability of Ingrédients
          */
-        private ChefCuisine()
+        public void ChefCuisineActions()
         {
             /*
-
             GetCommandFromRestaurant();
 
-            foreach(Order in Orders)
+            foreach(Order in RestaurantOrders)
             {
                 if( VerifIngredient(Order) )
                 {
                     AlarmIngredientNotAvailable();
                 }
             }
-            */
             DisplayOrders();
-
+            */
         }
 
         private void DisplayOrders()
         {
-            int nbrCuisinier = InitKitchen.Config.Kitchen.Cuisiner ;
+            /*
+            int nbrCuisinier = KitchenOrder.KitchenConf.Cuisiner ;
 
             foreach (Recettes recette in Order)
             {
@@ -47,6 +63,7 @@ namespace ProjetKitchen.Model
                     }
                 }
             }
+            */
         }
 
         /*
@@ -57,6 +74,17 @@ namespace ProjetKitchen.Model
         {
             //Get the Command List from the JSON or BDD
             //commands = 
+
+            foreach (String Recette in Orders)
+            {
+                foreach (Recettes recetteAsk in RecettesList)
+                {
+                    if (recetteAsk.RecetteName == Recette)
+                    {
+                        OrdersArrived.Add(recetteAsk);
+                    }
+                }
+            }
         }
 
         /*

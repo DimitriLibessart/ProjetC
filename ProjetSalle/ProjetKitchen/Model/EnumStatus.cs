@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetKitchen.Model
 {
-    enum ElementStatus
+    public enum ElementStatus
     {
         Clean,
         Dirty,

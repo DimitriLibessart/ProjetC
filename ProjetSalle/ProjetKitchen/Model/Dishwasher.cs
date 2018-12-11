@@ -17,16 +17,7 @@ namespace ProjetKitchen.Model
         {
             Console.WriteLine("Dishwasher is ready to be used");
         }
-        private void WasherWork()
-        {
-            WashingMachine.Available = false;
-            // While the thread is alive
-            while (Thread.CurrentThread.IsAlive)
-            {
-                Thread.Sleep(WasherTime);
-            }
-            WashingMachine.Available = true;
-        }
+
 
     }
 }

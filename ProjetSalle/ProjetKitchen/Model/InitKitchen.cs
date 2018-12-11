@@ -12,7 +12,6 @@ namespace ProjetKitchen.Model
         private static InitKitchen _instance;
         static readonly object instanceLock = new object();
 
-        public List<Recettes> Orders { get; set; }
 
         public Config Config { get; set; }
 
@@ -22,32 +21,79 @@ namespace ProjetKitchen.Model
 
         public List<Plongeur> PlongeurList { get; set; }
 
+        public ChefCuisine KitchenChef { get; set; }
+
+        public List<Recettes> RecettesList { get; set; }
+
+        public List<Dish> Ustencils { get; set; }
+
 
         private InitKitchen()
         {
+            //Get the Config File
             Config = new Config();
 
+            //Recup the List of Ustencils in the Database (Armoire)
+            GetAllUstencils();
+
+            //Recup the List of Recettes in the Database (menu)
+            GetAllRecettesFromMenu();
+
             //Get the number of Cook in Config file and instanciate them with an ID
-            for(int c =0; c<= Config.Kitchen.Cuisiner; c++)
+            for (int c =0; c<= Config.KitchenConf.Cuisiner; c++)
             {
                 CookList.Add(new Cooker() { ID = c });
             }
 
             //Get the number of Commis Kitchen in Config file and instanciate them with an ID
-            for (int cc =0; cc <= Config.Kitchen.CommisCuisine; cc++)
+            for (int cc =0; cc <= Config.KitchenConf.CommisCuisine; cc++)
             {
                 CommisKitchenList.Add(new CommisKitchen() { ID = cc });
             }
 
             //Get the number of Plongeur in Config file and instanciate them with an ID
-            for (int p =0; p <= Config.Kitchen.Plongeur; p++)
+            for (int p =0; p <= Config.KitchenConf.Plongeur; p++)
             {
                 PlongeurList.Add(new Plongeur() { ID = p });
             }
         }
 
-    // If no instance of the kitchen, then, create one
-    public static InitKitchen Instance
+        private void GetAllRecettesFromMenu()
+        {
+            List<String> Listeeeeee = new List<String> { "test1", "test2", "test3" };
+
+            foreach(String recetteInList in Listeeeeee)
+            {
+                RecettesList.Add(new Recettes()
+                {
+                    RecetteName = recetteInList,
+                    TimeToRealize = 12,
+                    ListIngredients = { "Tomates", "Carottes", "Olives" , "Salade"},
+                    Ustencils = {
+                        Ustencils.Find(x => x.Name == "Couteau"),
+                        Ustencils.Find(x => x.Name == "Fourchette")
+                    }   
+                });
+            }
+        }
+        private void GetAllUstencils()
+        {
+            List<String> UstencilsInListeeeeee = new List<String> { "Couteau", "Fourchette", "Pouelle" };
+
+            foreach(String ustencilInList in UstencilsInListeeeeee)
+            {
+                Ustencils.Add(new Dish()
+                {
+                    Name = "ustencilInList",
+                    Category = "test",
+                    StatusDish = ElementStatus.Clean,
+                    CleaningTime = 0
+                });
+            }
+        }
+
+        // If no instance of the kitchen, then, create one
+        public static InitKitchen Instance
         {
             get
             {

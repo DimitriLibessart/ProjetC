@@ -6,165 +6,133 @@ public class Rootobject
 
 public class Config
 {
-    public Kitchen Kitchen { get; set; }
-    public Restaurant Restaurant { get; set; }
+    public Kitchenconf KitchenConf { get; set; }
+    public Commandsrestaurant CommandsRestaurant { get; set; }
 }
 
-public class Kitchen
+public class Kitchenconf
 {
     public int Cuisiner { get; set; }
     public int CommisCuisine { get; set; }
     public int Plongeur { get; set; }
 }
 
-public class Restaurant
+public class Commandsrestaurant
 {
-    public int NbrPieces { get; set; }
-    public int NbrTables { get; set; }
-    public int ChefRang { get; set; }
-    public int Serveur { get; set; }
-    public int CommisResto { get; set; }
-    public Clients Clients { get; set; }
+    public Salle1 Salle1 { get; set; }
+    public Salle2 Salle2 { get; set; }
 }
 
-public class Clients
+public class Salle1
 {
-    public Clients0 Clients0 { get; set; }
-    public Clients1 Clients1 { get; set; }
-    public Clients2 Clients2 { get; set; }
-    public Clients3 Clients3 { get; set; }
-    public Clients4 Clients4 { get; set; }
+    public Command1 Command1 { get; set; }
+    public Command2 Command2 { get; set; }
 }
 
-public class Clients0
+public class Command1
 {
-    public string Reservation { get; set; }
-    public int WaitingTime { get; set; }
-    public Commande Commande { get; set; }
+    public string TableNumber { get; set; }
+    public Commandslist CommandsList { get; set; }
 }
 
-public class Commande
+public class Commandslist
 {
-    public Choix1 Choix1 { get; set; }
-    public Choix2 Choix2 { get; set; }
+    public Client1 Client1 { get; set; }
+    public Client2 Client2 { get; set; }
 }
 
-public class Choix1
+public class Client1
 {
     public string Entree { get; set; }
     public string Plat { get; set; }
     public string Dessert { get; set; }
 }
 
-public class Choix2
+public class Client2
 {
     public string Entree { get; set; }
     public string Plat { get; set; }
     public string Dessert { get; set; }
 }
 
-public class Clients1
+public class Command2
 {
-    public string Reservation { get; set; }
-    public int WaitingTime { get; set; }
-    public Commande1 Commande { get; set; }
+    public string TableNumber { get; set; }
+    public Commandslist1 CommandsList { get; set; }
 }
 
-public class Commande1
+public class Commandslist1
 {
-    public Choix11 Choix1 { get; set; }
-    public Choix21 Choix2 { get; set; }
+    public Client11 Client1 { get; set; }
+    public Client21 Client2 { get; set; }
 }
 
-public class Choix11
-{
-    public string Entree { get; set; }
-    public string Plat { get; set; }
-    public string Dessert { get; set; }
-}
-
-public class Choix21
+public class Client11
 {
     public string Entree { get; set; }
     public string Plat { get; set; }
     public string Dessert { get; set; }
 }
 
-public class Clients2
-{
-    public string Reservation { get; set; }
-    public int WaitingTime { get; set; }
-    public Commande2 Commande { get; set; }
-}
-
-public class Commande2
-{
-    public Choix12 Choix1 { get; set; }
-    public Choix22 Choix2 { get; set; }
-}
-
-public class Choix12
+public class Client21
 {
     public string Entree { get; set; }
     public string Plat { get; set; }
     public string Dessert { get; set; }
 }
 
-public class Choix22
+public class Salle2
+{
+    public Command11 Command1 { get; set; }
+    public Command21 Command2 { get; set; }
+}
+
+public class Command11
+{
+    public string TableNumber { get; set; }
+    public Commandslist2 CommandsList { get; set; }
+}
+
+public class Commandslist2
+{
+    public Client12 Client1 { get; set; }
+    public Client22 Client2 { get; set; }
+}
+
+public class Client12
 {
     public string Entree { get; set; }
     public string Plat { get; set; }
     public string Dessert { get; set; }
 }
 
-public class Clients3
-{
-    public string Reservation { get; set; }
-    public int WaitingTime { get; set; }
-    public Commande3 Commande { get; set; }
-}
-
-public class Commande3
-{
-    public Choix13 Choix1 { get; set; }
-    public Choix23 Choix2 { get; set; }
-}
-
-public class Choix13
+public class Client22
 {
     public string Entree { get; set; }
     public string Plat { get; set; }
     public string Dessert { get; set; }
 }
 
-public class Choix23
+public class Command21
+{
+    public string TableNumber { get; set; }
+    public Commandslist3 CommandsList { get; set; }
+}
+
+public class Commandslist3
+{
+    public Client13 Client1 { get; set; }
+    public Client23 Client2 { get; set; }
+}
+
+public class Client13
 {
     public string Entree { get; set; }
     public string Plat { get; set; }
     public string Dessert { get; set; }
 }
 
-public class Clients4
-{
-    public string Reservation { get; set; }
-    public int WaitingTime { get; set; }
-    public Commande4 Commande { get; set; }
-}
-
-public class Commande4
-{
-    public Choix14 Choix1 { get; set; }
-    public Choix24 Choix2 { get; set; }
-}
-
-public class Choix14
-{
-    public string Entree { get; set; }
-    public string Plat { get; set; }
-    public string Dessert { get; set; }
-}
-
-public class Choix24
+public class Client23
 {
     public string Entree { get; set; }
     public string Plat { get; set; }
