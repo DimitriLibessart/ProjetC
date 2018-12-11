@@ -7,16 +7,18 @@ namespace ProjetKitchen.Model
 {
     class ChefCuisine
     {
-        public List<Recettes> Orders { get; set; }
+        private static ChefCuisine _instance;
+        static readonly object instanceLock = new object();
+
+        private List<Recettes> Order;
 
         /*
          * Get the list of Orders 
          * Verif the Availability of Ingrédients
          */
-        public ChefCuisine()
+        private ChefCuisine()
         {
             /*
-            private Recettes Order;
 
             GetCommandFromRestaurant();
 
@@ -28,6 +30,23 @@ namespace ProjetKitchen.Model
                 }
             }
             */
+            DisplayOrders();
+
+        }
+
+        private void DisplayOrders()
+        {
+            int nbrCuisinier = InitKitchen.Config.Kitchen.Cuisiner ;
+
+            foreach (Recettes recette in Order)
+            {
+                foreach (Cooker cook in List<Cooker>) {
+                    if (cook.ID == nbrCuisinier % nbrCuisinier)
+                    {
+                        cook.TravailList.Add(recette);
+                    }
+                }
+            }
         }
 
         /*
@@ -63,6 +82,23 @@ namespace ProjetKitchen.Model
         private void AlarmIngredientNotAvailable()
         {
             //envoi un message au serveur pour lui demander une nouvelle commande
+        }
+
+        // If no instance of the kitchen, then, create one
+        public static ChefCuisine Instance
+        {
+            get
+            {
+                if (_instance == null) //Les locks prennent du temps, il est préférable de vérifier d'abord la nullité de l'instance.
+                {
+                    lock (instanceLock)
+                    {
+                        if (_instance == null) //on vérifie encore, au cas où l'instance aurait été créée entretemps.
+                            _instance = new ChefCuisine();
+                    }
+                }
+                return _instance;
+            }
         }
     }
 }

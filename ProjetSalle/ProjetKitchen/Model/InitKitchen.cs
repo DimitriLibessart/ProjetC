@@ -12,49 +12,42 @@ namespace ProjetKitchen.Model
         private static InitKitchen _instance;
         static readonly object instanceLock = new object();
 
-        private static WashingMachine washingMachine;
-        private static Dishwasher dishwasher;
-        private static UtencilWasher utencilWasher;
+        public List<Recettes> Orders { get; set; }
 
-        private static ChefCuisine chefCuisine;
+        public Config Config { get; set; }
+
+        public List<Cooker> CookList { get; set; }
+
+        public List<CommisKitchen> CommisKitchenList { get; set; }
+
+        public List<Plongeur> PlongeurList { get; set; }
+
 
         private InitKitchen()
         {
+            Config = new Config();
 
-            /* Initialisation of the washing  machines
-             */
-            washingMachine = new WashingMachine();
-            dishwasher = new Dishwasher();
-            utencilWasher = new UtencilWasher();
-
-            // Initialisation of the Kitchen Chef
-            chefCuisine = new ChefCuisine();
-
-            Config config = new Config();
-
-            // Initialisation of the Kitchen squad
-            // the Cooks
-            for (int c = 1; c <= config.Kitchen.Cuisiner; c++)
+            //Get the number of Cook in Config file and instanciate them with an ID
+            for(int c =0; c<= Config.Kitchen.Cuisiner; c++)
             {
-                Cooker cooker = new Cooker() { ID = c };
+                CookList.Add(new Cooker() { ID = c });
             }
 
-            // the Commis Kitchen
-            for (int ck = 1; ck <= config.Kitchen.Cuisiner; ck++)
+            //Get the number of Commis Kitchen in Config file and instanciate them with an ID
+            for (int cc =0; cc <= Config.Kitchen.CommisCuisine; cc++)
             {
-                CommisKitchen commisKitchen = new CommisKitchen() { ID = ck };
+                CommisKitchenList.Add(new CommisKitchen() { ID = cc });
             }
 
-            // the Plongeur
-            for (int p = 1; p <= config.Kitchen.Cuisiner; p++)
+            //Get the number of Plongeur in Config file and instanciate them with an ID
+            for (int p =0; p <= Config.Kitchen.Plongeur; p++)
             {
-                Plongeur plongeur = new Plongeur() { ID = p };
+                PlongeurList.Add(new Plongeur() { ID = p });
             }
-
         }
 
-        // If no instance of the kitchen, then, create one
-        public static InitKitchen Instance
+    // If no instance of the kitchen, then, create one
+    public static InitKitchen Instance
         {
             get
             {
