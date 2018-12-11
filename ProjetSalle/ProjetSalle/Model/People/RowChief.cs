@@ -6,45 +6,31 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model.People
 {
-    class RowChief //chef de rang
+    class RowChief
     {
-        bool available;
-        
-
-        public RowChief()
+        int IdTable { get; set; }
+        public void PlaceClient()
+        {
+            Console.WriteLine("Chef de Rang : Je vous place sur la table :" + IdTable);
+        }
+        public void PresenteCarte()
+        {
+            Console.WriteLine("Chef de Rang : Voici la carte");
+        }
+        public void MettreNappe()
         {
 
         }
-
-        public void PlaceCustomer()
-        {
-
-
-        }
-
-        public void PresentSetMeal()
+        public void PrendreCommande()
         {
 
         }
-
-        public void SetCloth()
+        public void PrendreCommandePartie()
         {
 
         }
-
-        public void TakeOrder()
+        public void TransmetCommande()
         {
-
-        }
-        public void GiveOrder()
-        {
-
-
-        }
-
-        public void RegainOrder()
-        {
-
 
         }
     }
