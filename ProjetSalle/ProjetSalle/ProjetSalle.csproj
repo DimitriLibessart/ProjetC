@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDD\Commands.cs" />
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\Main.cs" />
@@ -86,9 +87,6 @@
     <Compile Include="View\NewGroup.cs" />
     <Compile Include="View\NewSimulation.cs" />
     <Compile Include="View\View.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

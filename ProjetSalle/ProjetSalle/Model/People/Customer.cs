@@ -10,6 +10,7 @@ namespace ProjetSalle.Model.People
 {
     class Customer
     {
+        
 
         string Command1 { get; set; }
         string Command2 { get; set; }
@@ -20,7 +21,6 @@ namespace ProjetSalle.Model.People
         }
         public void Commander()
         {
-
             Console.WriteLine("Je desire commander : " + Command1); //Parse Commande
         }
         public void Commander2()

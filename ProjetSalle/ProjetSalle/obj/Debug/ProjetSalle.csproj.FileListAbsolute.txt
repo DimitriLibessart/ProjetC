@@ -35,3 +35,9 @@ C:\Users\Kisuke\Documents\Git\ProjetC-\ProjetSalle\ProjetSalle\bin\Debug\ProjetS
 C:\Users\Kisuke\Documents\Git\ProjetC-\ProjetSalle\ProjetSalle\bin\Debug\ProjetSalle.exe
 C:\Users\Kisuke\Documents\Git\ProjetC-\ProjetSalle\ProjetSalle\bin\Debug\ProjetSalle.pdb
 >>>>>>> d7df1a9e4bdcd4c9095cd8e995d711986453772a
+C:\Users\Kisuke\Documents\Git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csprojAssemblyReference.cache
+C:\Users\Kisuke\Documents\Git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.Properties.Resources.resources
+C:\Users\Kisuke\Documents\Git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csproj.GenerateResource.cache
+C:\Users\Kisuke\Documents\Git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.csproj.CoreCompileInputs.cache
+C:\Users\Kisuke\Documents\Git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.exe
+C:\Users\Kisuke\Documents\Git\ProjetC\ProjetSalle\ProjetSalle\obj\Debug\ProjetSalle.pdb

@@ -16,7 +16,7 @@ namespace ProjetSalle.Model.People
         }
         public void CheckReservation()
 
-       {/*
+       {
             string nom;
             int id;
             string attitude;
@@ -37,7 +37,6 @@ namespace ProjetSalle.Model.People
                         switch (nbr)
                         {
                             case 0:
-
                                 Console.WriteLine("Maitre d'hôtel : Vous n'avez pas de réservation");
                                 break;
                             case 1:
@@ -45,20 +44,14 @@ namespace ProjetSalle.Model.People
                                 break;
                         }
                         Console.WriteLine("Maitre d'hôtel : Combien êtes vous ?");
-
                     }
-
-
                 }
-
-
-
             }
 
-        */}
+        }
         public void AssignerTable()
         {
-            /* 
+             
              using (SqlConnection conn = new SqlConnection())
              {
 
@@ -74,10 +67,10 @@ namespace ProjetSalle.Model.People
                      {
                          string str = (String.Format("{0} \n", reader[0]));
                          int nbrTable = int.Parse(str);
-                         Console.WriteLine = ("Maitre d'hôtel : Je vous place sur la table " + nbrTable + " Monsieur");
+                         Console.WriteLine("Maitre d'hôtel : Je vous place sur la table " + nbrTable + " Monsieur");
                      }
                  }
-                 string string1 = Console.WriteLine;
+                 string string1 = string1;
                  string toFind1 = "table ";
                  string toFind2 = " Monsieur";
                  int start = string1.IndexOf(toFind1) + toFind1.Length;
@@ -92,6 +85,6 @@ namespace ProjetSalle.Model.People
              }
 
          
-       */ }       
+        }       
     }
 }

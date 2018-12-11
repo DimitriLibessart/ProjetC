@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProjetKitchen.Model.Dish;
 
 namespace ProjetSalle.Model.People
 {
     class Server
     {
-        private List<Dish> ListePortes;    //List of dishes that the server is carrying
+        //private List/*<Dish>*/ ListePortes;    //List of dishes that the server is carrying
 
         public void Serve()
         {
