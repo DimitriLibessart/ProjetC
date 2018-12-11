@@ -1,52 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjetSalle.Model.People
 {
-    class RowChief //chef de rang
-    {
-        bool available;
-        
 
-        public RowChief()
+    class RowChief
         {
-
-        }
-
-        public void PlaceCustomer()
-        {
-
-
-        }
-
-        public void PresentSetMeal()
-        {
-
-        }
-
-        public void SetCloth()
-        {
-
-        }
-
-        public void TakeOrder()
-        {
-
-        }
-        public void GiveOrder()
-        {
-
-
-        }
-
-        public void RegainOrder()
-        {
-
-
-        }
+            public void PlaceClient()
+            {
+            }
+            public void PresenteCarte()
+            {
+            }
+            public void MettreNappe()
+            {
+            }
+            public void PrendreCommande()
+            {
+            }
+            public void PrendreCommandePartie()
+            {
+            }
+            public void TransmetCommande()
+            {
+            }
     }
+    
 
 }
+

@@ -77,7 +77,6 @@
     <Compile Include="Model\People\Server.cs" />
     <Compile Include="Model\Piece.cs" />
     <Compile Include="Model\Restaurant.cs" />
-    <Compile Include="Model\RoomClerk.cs" />
     <Compile Include="Model\SocketDish.cs" />
     <Compile Include="Model\SocketDishWashing.cs" />
     <Compile Include="Model\SocketOrder.cs" />
@@ -88,6 +87,9 @@
     <Compile Include="View\NewGroup.cs" />
     <Compile Include="View\NewSimulation.cs" />
     <Compile Include="View\View.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -1,31 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjetSalle.Model.People
 {
-    class Customer //client
+    class Customer
     {
-        int numTable;
-        //int Order = Order;
-
-        public Customer(int numTable)
+        string Commande { get; set; }
+        string Commande2 { get; set; }
+        public void Arriver()
         {
-            this.numTable = numTable;
+            Console.WriteLine("Le client arrive");
         }
-        static void Arrived()
+        public void Commander()
         {
-            for (int i = 0; i<1000; i++){
-            Console.WriteLine("Customer: I'm here");
+            Console.WriteLine("Je desire commander : " + Commande); //Parse Commande
         }
-            }
-
-        public void TakeOrder()
+        public void Commander2()
         {
-
+            Console.WriteLine("Si ce n'est pas possible j'aimerais alors commander ceci : " + Commande); //Parse Commande2
         }
-
     }
 }
