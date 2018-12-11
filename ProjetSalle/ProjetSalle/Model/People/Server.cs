@@ -12,7 +12,11 @@ namespace ProjetSalle.Model.People
 
         public void Serve()
         {
+<<<<<<< HEAD
             // Console.WriteLine("Voici la commande de la table :" + IdCommand + "pour le client"+IdCustomer); Serve the command of a customer
+=======
+           // Console.WriteLine("Voici la commande de la table :" + IdCommand + "pour le client"+IdCustomer); Serve the command of a customer
+>>>>>>> d7df1a9e4bdcd4c9095cd8e995d711986453772a
         }
         public void Clear()
         {
