@@ -1,21 +1,21 @@
 {
 	"Config": {
 		"Kitchen": {
-			"Cuisiner": "6",
-			"CommisCuisine": "2",
-			"Plongeur": "1"
+			"Cuisiner": 6,
+			"CommisCuisine": 2,
+			"Plongeur": 1
 		},
 		"Restaurant": {
-			"NbrPieces": "2",
-			"NbrTables": "6",
-			"ChefRang": "2",
-			"Serveur": "2",
-			"CommisResto": "1",
+			"NbrPieces": 2,
+			"NbrTables": 6,
+			"ChefRang": 2,
+			"Serveur": 2,
+			"CommisResto": 1,
 			//Client List
 			"Clients": {
 				"Clients0": {
 					"Reservation": "false",		//reservation
-					"WaitingTime": "30",		//waiting time in minutes
+					"WaitingTime": 30,		//waiting time in minutes
 					"Commande": {
             "Choix1": {
               "Entree": "Veloute de champignons",
@@ -31,7 +31,7 @@
 				},
 				"Clients1": {
 					"Reservation": "true",
-					"WaitingTime": "90", //waiting time in minutes
+					"WaitingTime": 90, //waiting time in minutes
 					"Commande": {
             "Choix1": {
               "Entree": "Veloute de carottes au cumin",
@@ -47,7 +47,7 @@
 				},
 				"Clients2": {
 					"Reservation": "false",
-					"WaitingTime": "60", //waiting time in minutes
+					"WaitingTime": 60, //waiting time in minutes
 					"Commande": {
             "Choix1": {
               "Entree": "Veloute de champignons",
@@ -63,7 +63,7 @@
 				},
 				"Clients3": {
 					"Reservation": "true",
-					"WaitingTime": "30", //waiting time in minutes
+					"WaitingTime": 30, //waiting time in minutes
 					"Commande": {
             "Choix1": {
               "Entree": "Roulade de saumon fume aux asperges, sauce crevettes et chevre frais",
@@ -79,7 +79,7 @@
 				},
 				"Clients4": {
 					"Reservation": "false",
-					"WaitingTime": "120", //waiting time in minutes
+					"WaitingTime": 120, //waiting time in minutes
 					"Commande": {
             "Choix1": {
               "Entree": "Roulade de saumon fume aux asperges, sauce crevettes et chevre frais",

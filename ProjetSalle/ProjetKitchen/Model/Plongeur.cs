@@ -6,24 +6,36 @@ using System.Threading.Tasks;
 
 namespace ProjetKitchen.Model
 {
-
     class Plongeur
     {
+        public int ID { get; set; }
+
         public List<Dish> DirtyDishies { get; set; }
 
-        Plongeur()
-        {
-            GetVaisselle();
+        // TypeElement { Vaiselle, Linge, Ustencils};
+        private readonly String typeElement = "Vaiselle";
 
+
+        public Plongeur(String typeElement)
+        {
+
+            GetVaisselle();
             CheckDispoLavage();
 
-            Laver(typeElement);
+            Laver(typeElement, DirtyDishies);
 
         }
 
         private void CheckDispoLavage()
         {
-            
+            if (Dishwasher.Available)
+            {
+
+            }
+            else if (WashingMachine.Available)
+            {
+
+            }
         }
 
         private void CheckDispoLavage(String typeElement)
@@ -31,9 +43,28 @@ namespace ProjetKitchen.Model
             
         }
 
-        private void Laver(object typeElement)
+        private void Laver(String typeElement, List<Dish> aLaver)
         {
-            throw new NotImplementedException();
+
+            switch (typeElement)
+            {
+                case "Vaiselle":
+
+                    aLaver = GetDishiestoDishWasher(aLaver);
+                    InitKitchen..UseWashingMachine(aLaver);
+                    break; 
+
+                case "Linge":
+                    Use(aLaver);
+                    break;
+
+                case "Ustencils":
+                    foreach(Dish utencil in aLaver)
+                    {
+                        WashUtensils(utencil);
+                    }
+                    break;
+            }
         }
 
         private void GetVaisselle()
@@ -41,6 +72,20 @@ namespace ProjetKitchen.Model
             //Get the Dishies List from the JSON or BDD
             //DirtyDishies = 
 
+        }
+
+        private LIst<Dish> GetDishiestoDishWasher(List<Dish> DirtyDishies)
+        {
+            int fouchettes = 24, cuillères = 24, couteaux = 24, assietes = 24, verres = 24;
+            int contenance = fouchettes + cuillères + couteaux + assietes + verres;
+            while (contenance !=0)
+            {
+                foreach(Dish dish in DirtyDishies)
+                {
+                    if()
+                }
+            }
+            return DirtyDishies;
         }
     }
 }
