@@ -5,14 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
 
 
 namespace ProjetSalle.Model.People
 {
     class RowChief
     {
-        public List<Table> TableAvaible { get; set; }
 
         public int RoomNumber { get; set; }
 
