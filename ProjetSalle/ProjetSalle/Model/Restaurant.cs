@@ -10,6 +10,10 @@ namespace ProjetSalle.Model
 {
     class Restaurant
     {
+        private static Restaurant _instance;
+        static readonly object instanceLock = new object();
+
+
         //rnd(n) give a random number
         private Random rnd;
 
@@ -23,12 +27,15 @@ namespace ProjetSalle.Model
         public Menu Menu { get; set; }
 
 
+        private Restaurant() { }
+
+
         /* Initilisation of the Elements of the Restaurant
          * Initilisation of the Personnel of the Restaurant
          * Get the Recettes Names for the Menu of the Restaurant
          * Call the Methode to add new Clients (in a group)
          */ 
-        public Restaurant()
+        public void InitRestaurant()
         {
             GroupeNumber = 0;
             rnd = new Random();
@@ -116,6 +123,23 @@ namespace ProjetSalle.Model
             //Add the groupe created to the list of Clients groups
             ListNewClients.Add(tmpGrp);
                 
+        }
+
+        // If no instance of the Restaurant, then, create one
+        public static Restaurant Instance
+        {
+            get
+            {
+                if (_instance == null) //Les locks prennent du temps, il est préférable de vérifier d'abord la nullité de l'instance.
+                {
+                    lock (instanceLock)
+                    {
+                        if (_instance == null) //on vérifie encore, au cas où l'instance aurait été créée entretemps.
+                            _instance = new Restaurant();
+                    }
+                }
+                return _instance;
+            }
         }
     }
 }
