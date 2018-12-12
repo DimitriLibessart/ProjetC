@@ -11,12 +11,13 @@ namespace ProjetSalle.Controller
     {
         static void Main(string[] args)
         {
+            /*
            // Controller controller;
 
             Thread CustomerArrived = new Thread(Arrived);
             CustomerArrived.Start();
 
-           /* Random rnd = new Random();
+           Random rnd = new Random();
             
 
             for (int i = 0; i < 10; i++)
@@ -25,7 +26,7 @@ namespace ProjetSalle.Controller
                 int mIndex = rnd.Next(client.Length);
                 Console.WriteLine("   Client :     {0}", client[mIndex]);
                 Console.WriteLine("Customer: I'm here");
-            }*/
+            }
 
         }
         static void Arrived()
@@ -44,6 +45,8 @@ namespace ProjetSalle.Controller
                 Console.WriteLine("Customer: I'm here");
             }
             Console.WriteLine(hapinness.FindAll(h => h == "Happy").Count.ToString());
+        
+    */
         }
     }
 }
