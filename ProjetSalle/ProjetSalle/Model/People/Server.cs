@@ -10,13 +10,18 @@ namespace ProjetSalle.Model.People
     {
 
         //private List<> listePorte;
-        public List<string> Commands { get; set; }
+        public List<string> CommandsTable { get; set; }
 
-        public Commandsrestaurant OrderInst { get; set; }
+        private Server(){}
 
-        private Server()
+        private ServiceTable(int tableToServ)
         {
-            OrderInst = new Commandsrestaurant();
+            Table table = Restaurant.ListTable.Find(x => x == tableToServ);
+
+            foreach(Customer customer in table.ClientsOnTable.ListCustomer)
+            {
+                CommandsTable.AddRange(customer.Command);
+            }
             /*
                 List<string> TmpOrderList = OrderInst.Salle1.Command1.CommandsList;
 
@@ -30,13 +35,12 @@ namespace ProjetSalle.Model.People
                     }
                 }
                 */
+        }
 
             // Console.WriteLine("Voici la commande de la table :" + IdCommand + "pour le client"+IdCustomer); Serve the command of a customer
-            public void Clear()
-            {
+        public void Clear()
+         {
                 // Console.WriteLine("Je débarasse la table :"+IdTable); Clear a table
-            }
         }
     }
-
 }

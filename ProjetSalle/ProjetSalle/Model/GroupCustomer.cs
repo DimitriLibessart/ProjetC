@@ -9,18 +9,38 @@ using System.Threading.Tasks;
 namespace ProjetSalle.Model
 {
     class CustomerGroup
-
     {
-        string Recipe;
-        private int NumTable { get; set; }
-        int IDGroup;
-        private List<Customer> listCustomer;
-        int Customernumber;
+        public List<String> Recipe { get; set; }
 
+        private int NumTable { get; set; }
+
+        public int IDGroup { get; set; }
+
+        public  List<Customer> ListCustomer { get; set; }
+
+        public int NumberOfCustomer { get; set; }
+
+        /* 
+         * param : 
+         * return : 
+         */ 
         public CustomerGroup(List<Customer> listCustomer)
         {
             this.listCustomer = listCustomer;
         }
+
+        /* 
+         * param : 
+         * return : 
+         */ 
+        private SetRecipe(){
+
+        }
+
+        /* 
+         * param : 
+         * return : 
+         */ 
         public void FonctionExemple(int numTable)
         {
             using (SqlConnection conn = new SqlConnection())
