@@ -10,10 +10,6 @@ namespace ProjetSalle.Model
 {
     class CustomerGroup
     {
-        public List<String> Recipe { get; set; }
-
-        private int NumTable { get; set; }
-
         public int IDGroup { get; set; }
 
         public  List<Customer> ListCustomer { get; set; }
@@ -24,17 +20,8 @@ namespace ProjetSalle.Model
          * param : 
          * return : 
          */ 
-        public CustomerGroup(List<Customer> listCustomer)
+        public CustomerGroup()
         {
-            this.listCustomer = listCustomer;
-        }
-
-        /* 
-         * param : 
-         * return : 
-         */ 
-        private SetRecipe(){
-
         }
 
         /* 
@@ -71,4 +58,9 @@ namespace ProjetSalle.Model
             }
         }
     }
-}
+
+        public static implicit operator List<object>(CustomerGroup v)
+        {
+            throw new NotImplementedException();
+        }
+    }

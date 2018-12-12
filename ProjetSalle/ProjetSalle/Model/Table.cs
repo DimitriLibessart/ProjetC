@@ -12,10 +12,5 @@ namespace ProjetSalle.Model
         
         public CustomerGroup ClientsOnTable { get; set; }
 
-        //GroupCustomer group;
-
-        public Table()
-        {
-        }
     }
 }
