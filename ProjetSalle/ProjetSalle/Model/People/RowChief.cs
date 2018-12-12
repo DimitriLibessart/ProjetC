@@ -5,12 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+
 
 namespace ProjetSalle.Model.People
 {
     class RowChief
 
     {
+        
+
+        public List<string> GetTable { get; set; }
+
+        public int Send { get; set; }
+
+
             public void PlaceClient()
             {
             }
@@ -20,14 +29,28 @@ namespace ProjetSalle.Model.People
             public void MettreNappe()
             {
             }
-            public void PrendreCommande()
+
+
+
+            public PrendreCommande(int GetPlat)
             {
+            Table table = Restaurant.ListePlat.Find(x => x == GetPlat);
+
+            foreach(Customer customer in table.ClientsOnTable.ListCustomer)
+            {
+               GetTable.AddRange(customer.Command);
             }
+            }
+
+
             public void PrendreCommandePartie()
             {
             }
-            public void TransmetCommande()
+
+            public TransmetCommande()
             {
+
+            
             }
 
     }
