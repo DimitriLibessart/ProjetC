@@ -8,6 +8,8 @@ namespace ProjetSalle.Model
 {
     class Restaurant
     {
+        public List<Table> ListTable { get; set; }
+
         public Restaurant()
         {
 

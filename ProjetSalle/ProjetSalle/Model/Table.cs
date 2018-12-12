@@ -8,7 +8,10 @@ namespace ProjetSalle.Model
 {
     class Table
     {
-        int NumTable;
+        public int NumTable { get; set; }
+        
+        public CustomerGroup ClientsOnTable { get; set; }
+
         //GroupCustomer group;
 
         public Table()
