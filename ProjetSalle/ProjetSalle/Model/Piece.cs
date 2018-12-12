@@ -13,7 +13,11 @@ namespace ProjetSalle.Model
 
         public List<Table> ListTable { get; set; }
 
-        public List<RowChief> MyProperty { get; set; }
+        public List<RowChief> ListRowChiefs { get; set; }
+
+        public List<RoomClerk> ListRoomClerk { get; set; }
+
+        public List<Server> ListServer { get; set; }
 
     }
 }

@@ -13,6 +13,7 @@ namespace ProjetSalle.Model
         private static Restaurant _instance;
         static readonly object instanceLock = new object();
 
+        public Config Config { get; set; } //Config File for the Peoples of the restaurant
 
         //rnd(n) give a random number
         private Random rnd;
@@ -22,7 +23,13 @@ namespace ProjetSalle.Model
         //Number of groups arrived in the Restaurant
         public int GroupeNumber { get; set; }
 
+        //List of clients who are waiting for a table
         public List<CustomerGroup> ListNewClients { get; set; }
+
+        //List of clients who are or was placed on table
+        public List<CustomerGroup> ListClients { get; set; }
+
+        public HotelManager HotelManager { get; set; }
 
         public Menu Menu { get; set; }
 
@@ -53,7 +60,7 @@ namespace ProjetSalle.Model
                     listTable.Add(new Table
                     {
                         NumTable = table,
-                        avaible = true
+                        StatusTable = EnumStatus.Clean
                     });
                 }
 
@@ -66,6 +73,46 @@ namespace ProjetSalle.Model
 
                 //Add the Room to the Restaurant
                 ListPiece.Add(piece);
+            }
+
+
+            /* Initialisation of the peoples on the restaurant
+             * 
+             */
+
+            Restaurant.Instance.HotelManager = new HotelManager();
+
+             foreach (Piece piece in ListPiece)
+            {
+                // Create a Row Chief and add him to the list by room
+                for (int rchief = 1; rchief <= Config.RestaurantConf.RowChief; rchief++)
+                {
+                    piece.ListRowChiefs.Add(new RowChief
+                    {
+                        IDRowChief = rchief,
+                        RoomNumber = piece.IDPiece
+                    });
+                }
+
+                // Create a Room Clerk and add him to the list by room
+                for (int rclerk =1; rclerk <= Config.RestaurantConf.RoomClerk; rclerk++)
+                {
+                    piece.ListRoomClerk.Add(new RoomClerk
+                    {
+                        IDRoomClerk = rclerk,
+                        RoomNumber = piece.IDPiece
+                    });
+                }
+
+                // Create a Server and add him to the list by room
+                for (int serv =1; serv <= Config.RestaurantConf.RowChief; serv++)
+                {
+                    piece.ListServer.Add(new Server
+                    {
+                        IDServer = serv,
+                        RoomNumber = piece.IDPiece
+                    });
+                }
             }
 
 

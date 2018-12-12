@@ -11,47 +11,52 @@ using System.Threading;
 namespace ProjetSalle.Model.People
 {
     class RowChief
-
     {
-        
         public List<Table> TableAvaible { get; set; }
-            
-            /*
-             * 
-            */
-            public void PlaceClient()
+
+        public int RoomNumber { get; set; }
+
+        public int IDRowChief { get; set; }
+
+        //private List<> listePorte;
+        public List<string> CommandsTable { get; set; }
+
+
+        public RowChief() { }
+
+        /*
+         * 
+         */
+        public void PlaceClient(CustomerGroup groupeClient, int numTable)
+        {
+
+        }
+
+        /*
+         * 
+         */
+        public void MettreTable(int numTable)
+        {
+
+            Table table = Restaurant.Instance.ListPiece[RoomNumber].ListTable[numTable];
+
+            table.ElementsOnTable.Add("Nappe");
+
+            table.StatusTable = EnumStatus.Ready;
+        }
+
+        /* Get Commands from Clients on the specified table and add them to the list of Commands
+         * Param: (int) Number of the table
+         */
+        private void PriseCommandes(int tableToServ)
+        {
+            Table table = Restaurant.Instance.ListPiece[RoomNumber].ListTable[tableToServ];
+
+            foreach (Customer customer in table.ClientsOnTable.ListCustomer)
             {
-            for (int i = 1; i <= Restaurant.Instance.ListPiece.Count; i++){
-                TableAvaible.AddRange(Restaurant.Instance.ListPiece[i].ListTable(x => x.available == true));  
-             
-             CustomerGroup groupCustomer = Restaurant.Instance.GroupeNumber.
+                CommandsTable.AddRange(customer.Command);
             }
-            }
-
-
-            public void MettreNappe()
-            {
-            }
-
-            public PrendreCommande(int GetPlat)
-            {
-            Table table = Restaurant.ListePlat.Find(x => x == GetPlat);
-
-            foreach(Customer customer in table.ClientsOnTable.ListCustomer)
-            {
-               GetTable.AddRange(customer.Command);
-            }
-            }
-
-
-            public TransmetCommande()
-            {
-
-            
-            }
-
+        }
     }
-    
-
 }
 

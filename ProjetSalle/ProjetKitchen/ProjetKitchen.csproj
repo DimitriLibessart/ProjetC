@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Restaurant.cs" />
+    <Compile Include="Controller\Controller.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,7 +60,7 @@
     <Compile Include="Model\Dish.cs" />
     <Compile Include="Model\Dishwasher.cs" />
     <Compile Include="Model\EnumStatus.cs" />
-    <Compile Include="Model\InitKitchen.cs" />
+    <Compile Include="Model\Kitchen.cs" />
     <Compile Include="Model\Plongeur.cs" />
     <Compile Include="Model\Recettes.cs" />
     <Compile Include="Model\UtencilWasher.cs" />
