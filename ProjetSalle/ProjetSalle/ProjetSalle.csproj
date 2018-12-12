@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDD\Commands.cs" />
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\Main.cs" />
@@ -61,14 +60,7 @@
     <Compile Include="Model\Dishware.cs" />
     <Compile Include="Model\enumStatus.cs" />
     <Compile Include="Model\GroupCustomer.cs" />
-    <Compile Include="Model\ICustomerSolution.cs" />
-    <Compile Include="Model\IModel.cs" />
-    <Compile Include="Model\IRestaurant.cs" />
-    <Compile Include="Model\IRoomClerk.cs" />
-    <Compile Include="Model\IRowChief.cs" />
-    <Compile Include="Model\IServer.cs" />
-    <Compile Include="Model\IStatusTable.cs" />
-    <Compile Include="Model\Model.cs" />
+    <Compile Include="Model\Menu.cs" />
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\People\Customer.cs" />
     <Compile Include="Model\People\HotelManager.cs" />
@@ -96,7 +88,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Model\Commands.json" />
+    <None Include="BDD\Commands.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,5 +102,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

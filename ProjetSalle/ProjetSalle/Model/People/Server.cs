@@ -8,36 +8,27 @@ namespace ProjetSalle.Model.People
 {
     class Server
     {
+        public int RoomNumber { get; set; }
 
         //private List<> listePorte;
         public List<string> CommandsTable { get; set; }
 
-        private Server(){}
+        public Server(){}
 
-        private ServiceTable(int tableToServ)
+        /* Get Commands from Clients on the specified table and add them to the list of Commands
+         * Param: (int) Number of the table
+         */ 
+        private void PriseCommandes(int tableToServ)
         {
-            Table table = Restaurant.ListTable.Find(x => x == tableToServ);
+            Table table = Restaurant.Instance.ListPiece[RoomNumber].ListTable[tableToServ];
 
-            foreach(Customer customer in table.ClientsOnTable.ListCustomer)
+            foreach (Customer customer in table.ClientsOnTable.ListCustomer)
             {
                 CommandsTable.AddRange(customer.Command);
             }
-            /*
-                List<string> TmpOrderList = OrderInst.Salle1.Command1.CommandsList;
-
-
-                foreach (string Commande in TmpOrderList.)
-                {
-                    foreach(string Recette in Commande)
-                    {
-                        Commands.Add(Recette);
-                        Console.WriteLine(Recette);
-                    }
-                }
-                */
         }
 
-            // Console.WriteLine("Voici la commande de la table :" + IdCommand + "pour le client"+IdCustomer); Serve the command of a customer
+
         public void Clear()
          {
                 // Console.WriteLine("Je débarasse la table :"+IdTable); Clear a table
