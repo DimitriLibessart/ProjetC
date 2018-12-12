@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ProjetKitchen.Model
 {
-    class InitKitchen
+    class Kitchen
     {
-        private static InitKitchen _instance;
+        private static Kitchen _instance;
         static readonly object instanceLock = new object();
 
 
@@ -27,8 +27,9 @@ namespace ProjetKitchen.Model
 
         public List<Dish> Ustencils { get; set; }
 
+        private Kitchen() { }
 
-        private InitKitchen()
+        public void InitKitchen()
         {
             //Get the Config File
             Config = new Config();
@@ -93,7 +94,7 @@ namespace ProjetKitchen.Model
         }
 
         // If no instance of the kitchen, then, create one
-        public static InitKitchen Instance
+        public static Kitchen Instance
         {
             get
             {
@@ -102,7 +103,7 @@ namespace ProjetKitchen.Model
                     lock (instanceLock)
                     {
                         if (_instance == null) //on vérifie encore, au cas où l'instance aurait été créée entretemps.
-                            _instance = new InitKitchen();
+                            _instance = new Kitchen();
                     }
                 }
                 return _instance;

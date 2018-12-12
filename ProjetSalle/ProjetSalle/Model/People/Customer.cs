@@ -10,7 +10,10 @@ namespace ProjetSalle.Model.People
 {
     class Customer
     {
+        public int ID { get; set; }
+
         public List<string> Command { get; set; }
+
 
         /* 
          * param : 
@@ -27,7 +30,7 @@ namespace ProjetSalle.Model.People
          */ 
         public void Commander()
         {
-            Console.WriteLine("Je desire commander : " + Command1); //Parse Commande
+            Console.WriteLine("Je desire commander : " + Command); //Parse Commande
             // set Command
         }
 
@@ -37,7 +40,7 @@ namespace ProjetSalle.Model.People
          */ 
         public void Commander2()
         {
-            Console.WriteLine("Si ce n'est pas possible j'aimerais alors commander ceci : " + Command2); //Parse Commande2
+            Console.WriteLine("Si ce n'est pas possible j'aimerais alors commander ceci : " + Command); //Parse Commande2
         }
         /*
                  private Order order;

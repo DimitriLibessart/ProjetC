@@ -14,23 +14,24 @@ namespace ProjetSalle.Model.People
 
     {
         
-
-        public List<string> GetTable { get; set; }
-
-        public int Send { get; set; }
-
-
+        public List<Table> TableAvaible { get; set; }
+            
+            /*
+             * 
+            */
             public void PlaceClient()
             {
+            for (int i = 1; i <= Restaurant.Instance.ListPiece.Count; i++){
+                TableAvaible.AddRange(Restaurant.Instance.ListPiece[i].ListTable(x => x.available == true));  
+             
+             CustomerGroup groupCustomer = Restaurant.Instance.GroupeNumber.
             }
-            public void PresenteCarte()
-            {
             }
+
+
             public void MettreNappe()
             {
             }
-
-
 
             public PrendreCommande(int GetPlat)
             {
@@ -42,10 +43,6 @@ namespace ProjetSalle.Model.People
             }
             }
 
-
-            public void PrendreCommandePartie()
-            {
-            }
 
             public TransmetCommande()
             {

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model.people
 {
-    class RoomClerk : Server //Commis_salle
+    //Commis_salle
+    class RoomClerk : Server 
     {
         public void ServirPainEau()
         {

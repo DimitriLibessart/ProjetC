@@ -12,11 +12,9 @@ namespace ProjetSalle.Model
         
         public CustomerGroup ClientsOnTable { get; set; }
 
-        //GroupCustomer group;
-        Table table = new table();
+        public bool avaible{ get; set; }
 
-        public Table()
-        {
-        }
+       
+
     }
 }
