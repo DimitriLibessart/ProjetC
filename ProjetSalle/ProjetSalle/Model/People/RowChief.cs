@@ -6,10 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ProjetSalle.Model.People
 {
     class RowChief
     {
+
         public int RoomNumber { get; set; }
 
         public int IDRowChief { get; set; }

@@ -60,7 +60,7 @@ namespace ProjetSalle.Model
                     listTable.Add(new Table
                     {
                         NumTable = table,
-                        StatusTable = EnumStatus.Clean,
+                        StatusTable = EnumStatus.Clean
                     });
                 }
 
