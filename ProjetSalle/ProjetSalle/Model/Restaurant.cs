@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -80,11 +81,48 @@ namespace ProjetSalle.Model
          */ 
         private void AddRecettesToMenu()
         {
-            Menu.ListPlatInMenu.AddRange( new List<String> {"Carottes", "Celeris", "Betraves"} );
+                List<string> NomEntree = null;
+                List<string> NomPlat = null;
+                List<string> NomDessert = null;
 
-            Menu.ListPlatInMenu.AddRange( new List<String> {"Lapin", "Ours", "cheval", "Poulet"} );
+                using (SqlConnection conn = new SqlConnection())
+                {
 
-            Menu.ListPlatInMenu.AddRange( new List<String> {"Chocolat", "Glace", "Gauffre", "Crepes", "Cafe"} );
+                    conn.ConnectionString = "Server=ORDINATEUR-KISU\\SQLEXPRESS;Database=C#_Project;Trusted_Connection=true";
+                    conn.Open();
+                    SqlCommand command = new SqlCommand("SELECT Name FROM Recipe WHERE Category='Entree'", conn);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            NomEntree.Add(string.Format("{0} \n",
+                                reader[0]));
+                        }
+                    }
+                    SqlCommand command2 = new SqlCommand("SELECT Name FROM Recipe WHERE Category='Plat'", conn);
+                    using (SqlDataReader reader = command2.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            NomPlat.Add(string.Format("{0} \n",
+                                reader[0]));
+                        }
+                    }
+                    SqlCommand command3 = new SqlCommand("SELECT Name FROM Recipe WHERE Category='Dessert'", conn);
+                    using (SqlDataReader reader = command3.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            NomDessert.Add(string.Format("{0} \n",
+                                reader[0]));
+                        }
+                    }
+                }
+            Menu.ListPlatInMenu.AddRange( NomEntree );
+
+            Menu.ListPlatInMenu.AddRange( NomPlat );
+
+            Menu.ListPlatInMenu.AddRange( NomDessert );
         }
 
         // Method that add new groupes every n times
