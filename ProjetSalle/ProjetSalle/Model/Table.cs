@@ -12,5 +12,9 @@ namespace ProjetSalle.Model
         
         public CustomerGroup ClientsOnTable { get; set; }
 
+        public List<String> ElementsOnTable { get; set; }
+
+        public EnumStatus StatusTable { get; set; }
+
     }
 }

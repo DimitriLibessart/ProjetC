@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace ProjetKitchen.Controller
 {
-    class Restaurant
+    class Controller
     {
-        public InitKitchen Kitchen { get; set; }
+        public Kitchen Kitchen { get; set; }
+
+        Controller()
+        {
+            Kitchen = Kitchen.Instance;
+        }
     }
 }

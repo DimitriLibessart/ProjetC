@@ -21,7 +21,6 @@ namespace ProjetSalle.Model.People
          */ 
         public void Arriver()
         {
-            Console.WriteLine("Le client arrive");
         }
 
         /* 

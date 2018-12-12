@@ -5,14 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetSalle.Model.people
+namespace ProjetSalle.Model.People
 {
     //Commis_salle
     class RoomClerk : Server 
     {
-        public void ServirPainEau()
+        public int IDRoomClerk { get; set; }
+
+        public void ServirPainEau(int numTable)
         {
-            // Console.WriteLine("Voici du pain et de l'eau pour la table : "+IdTable); //Wait for the customer to come to the table
+            Restaurant.Instance.ListPiece[RoomNumber].ListTable[numTable].ElementsOnTable.AddRange(new List<String>{ "Pain", "Eau"});
         }
     }
 }

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    enum enumStatus
+    enum EnumStatus
     {
-
-        Clean,
-        Used,
+        Clean, //table free and clear but nothing on it
+        Used, //Clients on the table
         Soiled,
-        Wait,
+        Dirty, //Client left but table still dirty
+        Ready //ready to be used by clients
     }
 }
