@@ -1,0 +1,17 @@
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\ProjetKitchenTest.dll
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\ProjetKitchenTest.pdb
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\obj\Debug\ProjetKitchenTest.csprojAssemblyReference.cache
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\obj\Debug\ProjetKitchenTest.csproj.CoreCompileInputs.cache
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\obj\Debug\ProjetKitchenTest.csproj.CopyComplete
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\obj\Debug\ProjetKitchenTest.dll
+C:\Users\caron\Desktop\école\A3\U.E. 2\Projet\C#\ProjetC\ProjetSalle\ProjetKitchenTest\obj\Debug\ProjetKitchenTest.pdb
