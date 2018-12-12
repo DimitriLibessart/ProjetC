@@ -8,8 +8,10 @@ using System.Windows.Forms;
 
 namespace ProjetSalle.Model.People
 {
-    class HotelManager
+   public class HotelManager
     {
+        public delegate void PlaceClient_EventHandler(Object Client, EventArgs e);
+        public event PlaceClient_EventHandler PlaceClient;
         public void AccueilClient()
         {
             Console.WriteLine("Maitre d'hôtel : Bonjour Monsieur quel est votre nom ? Avez vous une reservation ? ");
@@ -82,6 +84,10 @@ namespace ProjetSalle.Model.People
                  using (SqlDataReader reader2 = command2.ExecuteReader())
                  {
                  }
+                 if (PlaceClient != null)
+                {
+                    PlaceClient(this, EventArgs.Empty);
+                }
              }
 
          

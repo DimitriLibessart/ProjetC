@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProjetSalle.Model
 {
-    interface IRowChief
+    public interface IRowChief
     {
 
-
+        void Update(string message);
 
     }
 }

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ProjetSalle.Model.People
 {
-    class RowChief
+   public class RowChief
 
     {
             public void PlaceClient()
