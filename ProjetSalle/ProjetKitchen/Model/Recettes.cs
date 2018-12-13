@@ -8,7 +8,7 @@ namespace ProjetKitchen.Model
     {
         public String RecetteName { get; set; }
 
-        //public List<Dish> Ustencils { get; set; }
+        public List<Dish> Ustencils { get; set; }
 
         public int TimeToRealize { get; set; }
 
@@ -71,6 +71,11 @@ namespace ProjetKitchen.Model
                 foreach (var item in ListIngredients)
                 {
                     Console.WriteLine(item);
+                }
+                foreach (var item in Ustencils2)
+                {
+                    Dish dish = new Dish();
+                    Ustencils.Add(dish);
                 }
             }
         }
