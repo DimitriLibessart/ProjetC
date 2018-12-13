@@ -47,27 +47,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Controller.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ChefCuisine.cs" />
-    <Compile Include="Model\CommisKitchen.cs" />
+    <Compile Include="Controller\Main.cs" />
+    <Compile Include="Model\People\ChefCuisine.cs" />
+    <Compile Include="Model\People\CommisKitchen.cs" />
     <Compile Include="Model\Config.cs" />
-    <Compile Include="Model\Cooker.cs" />
+    <Compile Include="Model\People\Cooker.cs" />
     <Compile Include="Model\Dish.cs" />
     <Compile Include="Model\Dishwasher.cs" />
     <Compile Include="Model\EnumStatus.cs" />
     <Compile Include="Model\Kitchen.cs" />
-    <Compile Include="Model\Plongeur.cs" />
+    <Compile Include="Model\People\Plongeur.cs" />
     <Compile Include="Model\Recettes.cs" />
     <Compile Include="Model\UtencilWasher.cs" />
     <Compile Include="Model\Washer.cs" />
     <Compile Include="Model\WashingMachine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Displayer.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -90,8 +86,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

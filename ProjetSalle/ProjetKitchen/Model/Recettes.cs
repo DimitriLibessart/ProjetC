@@ -11,7 +11,7 @@ namespace ProjetKitchen.Model
 
         public int TimeToRealize { get; set; }
 
-        public List<string> ListIngredients { get; set; }
+        public List<String> ListIngredients { get; set; }
 
         }
 }
