@@ -11,9 +11,14 @@ namespace ProjetKitchen.Controller
     {
         public Kitchen Kitchen { get; set; }
 
-        Controller()
+        public View.Displayer Displayer { get; set; }
+
+        public Controller()
         {
+            Console.WriteLine("Preparation de la Cuisine\n");
             Kitchen = Kitchen.Instance;
+
+            Kitchen.InitKitchen();
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,13 +15,20 @@ namespace ProjetSalle.Model.People
 
         public List<string> Command { get; set; }
 
+        public int TimeToEat { get; set; }
 
-        /* 
-         * param : 
-         * return : 
-         */ 
-        public void Arriver()
+        //Cree un tread pour manger le repas
+        public void Manger(int timeToEat)
         {
+            TimeToEat = timeToEat;
+            Thread mangerRepas = new Thread(new ThreadStart(MangerRepas));
+            mangerRepas.Start();
+        }
+        
+        // Thread qui dure le temps de manger le repas
+        public void MangerRepas()
+        {
+            Thread.Sleep(TimeToEat);
         }
 
         /* 

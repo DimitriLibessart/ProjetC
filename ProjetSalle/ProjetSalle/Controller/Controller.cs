@@ -1,4 +1,5 @@
 ﻿using ProjetSalle.Model;
+using ProjetSalle.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,18 @@ namespace ProjetSalle.Controller
 {
     class Controller
     { 
-        public Restaurant Restaurant { get; set; }
+        public Model.Restaurant Restaurant { get; set; }
+        public View.Displayer Displayer { get; }
 
-        Controller()
+        public Controller()
         {
+            Console.WriteLine("Preparation de la Salle à manger du Restaurant\n");
             Restaurant = Restaurant.Instance;
+
+            Restaurant.InitRestaurant();
+            //Displayer = new Displayer();
+
         }
+        
     }
 }

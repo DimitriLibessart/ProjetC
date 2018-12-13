@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 using ProjetSalle.Model.People;
+using ProjetSalle.View;
 
 namespace ProjetSalle.Model
 {
@@ -15,8 +17,14 @@ namespace ProjetSalle.Model
 
         public Config Config { get; set; } //Config File for the Peoples of the restaurant
 
+        public Displayer DisplayerRef { get; set; } //Config File for the Peoples of the restaurant
+
         //rnd(n) give a random number
         private Random rnd;
+        private System.Timers.Timer myTimer;
+
+        //Benefices
+        public int Benefices { get; set; }
 
         public List<Piece> ListPiece { get; set; }
 
@@ -52,7 +60,9 @@ namespace ProjetSalle.Model
             for (int room = 1; room <= rnd.Next(1,4); room++)
             {
                 //Create a List
-                List<Table> listTable = null;
+                List<Table> listTable = new List<Table>();
+
+                List<Piece> ListPiece = new List<Piece>();
 
                 //Add a random number (between 1 and 8) of tables to the List
                 for(int table =1; table <= rnd.Next(1,8); table++)
@@ -60,6 +70,7 @@ namespace ProjetSalle.Model
                     listTable.Add(new Table
                     {
                         NumTable = table,
+                        CapaciteTable = rnd.Next(2,10),
                         StatusTable = EnumStatus.Clean
                     });
                 }
@@ -77,7 +88,6 @@ namespace ProjetSalle.Model
 
 
             /* Initialisation of the peoples on the restaurant
-             * 
              */
 
             Restaurant.Instance.HotelManager = new HotelManager();
@@ -122,6 +132,7 @@ namespace ProjetSalle.Model
             //Add recettes to tis Menu
             AddRecettesToMenu();
 
+            AddNewClientEveryTimes();
         }
 
         /* Add the List aof the Entree, Plat and Dessert Get from BDD to the Menu Class
@@ -138,11 +149,21 @@ namespace ProjetSalle.Model
         // Method that add new groupes every n times
         private void AddNewClientEveryTimes()
         {
-            Thread newClient = new Thread(new ThreadStart(NewClientThreadFunction));
+            //Thread newClient = new Thread(new ThreadStart(NewClientThreadFunction));
+
+            // Create a timer
+            myTimer = new System.Timers.Timer();
+            // Tell the timer what to do when it elapses
+            myTimer.Elapsed += new ElapsedEventHandler(NewClientThreadFunction);
+            // Set it to go off every five seconds
+            myTimer.Interval = rnd.Next(1000,1000000);
+            // And start it        
+            myTimer.Enabled = true;
         }
 
+
         //Thread That Create group of clients
-        private void NewClientThreadFunction()
+        private void NewClientThreadFunction(object source, ElapsedEventArgs e)
         {
             int rndNbrClient = rnd.Next(8);
 
@@ -170,7 +191,8 @@ namespace ProjetSalle.Model
 
             //Add the groupe created to the list of Clients groups
             ListNewClients.Add(tmpGrp);
-                
+
+            Console.WriteLine("New Clients has arrived");
         }
 
         // If no instance of the Restaurant, then, create one
