@@ -118,11 +118,11 @@ namespace ProjetSalle.Model
                         }
                     }
                 }
-            Menu.ListPlatInMenu.AddRange( NomEntree );
+            Menu.ListPlatInMenu.AddRange(NomEntree);
 
-            Menu.ListPlatInMenu.AddRange( NomPlat );
+            Menu.ListPlatInMenu.AddRange(NomPlat);
 
-            Menu.ListPlatInMenu.AddRange( NomDessert );
+            Menu.ListPlatInMenu.AddRange(NomDessert);
         }
 
         // Method that add new groupes every n times
@@ -149,19 +149,19 @@ namespace ProjetSalle.Model
                 tmpGrp.ListCustomer.Add(new Customer() {
                     ID = GroupeNumber+i,
                     Command = {
-                        Menu.ListEntreeInMenu[Command_entree],
-                        Menu.ListPlatInMenu[Command_plat],
-                        Menu.ListDessertInMenu[Command_Dessert]
-                    }
+                                Menu.ListEntreeInMenu[Command_entree],
+                                Menu.ListPlatInMenu[Command_plat],
+                                Menu.ListDessertInMenu[Command_Dessert]
+                              }
                 });
             }
 
             GroupeNumber += 10;
 
             //Add the groupe created to the list of Clients groups
-            ListNewClients.Add(tmpGrp);
-                
+            ListNewClients.Add(tmpGrp); 
         }
+
 
         // If no instance of the Restaurant, then, create one
         public static Restaurant Instance

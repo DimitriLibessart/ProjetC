@@ -1,0 +1,4 @@
+C:\Users\Kisuke\Documents\Git\ProjetC\ProjetSalle\ProjetKitchen\obj\Debug\ProjetKitchen.csprojAssemblyReference.cache
+C:\Users\Kisuke\Documents\Git\ProjetC\ProjetSalle\ProjetKitchen\obj\Debug\ProjetKitchen.Properties.Resources.resources
+C:\Users\Kisuke\Documents\Git\ProjetC\ProjetSalle\ProjetKitchen\obj\Debug\ProjetKitchen.csproj.GenerateResource.cache
+C:\Users\Kisuke\Documents\Git\ProjetC\ProjetSalle\ProjetKitchen\obj\Debug\ProjetKitchen.csproj.CoreCompileInputs.cache
