@@ -1,5 +1,4 @@
 ﻿using ProjetKitchen.Model;
-using ProjetKitchen.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +18,7 @@ namespace ProjetKitchen.Controller
             Console.WriteLine("Preparation de la Cuisine\n");
             Kitchen = Kitchen.Instance;
 
-            //Displayer = Displayer.Instance;
-
+            Kitchen.InitKitchen();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace ProjetKitchen.View
 
         private Displayer() { }
 
-        public void DisplayerResto()
+        public void DisplayerKitchen()
         {
         }
 
