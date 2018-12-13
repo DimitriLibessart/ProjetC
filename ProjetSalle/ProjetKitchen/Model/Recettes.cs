@@ -63,16 +63,16 @@ namespace ProjetKitchen.Model
                     }
                 }
                 Console.WriteLine("ID des Ustensiles");
-                foreach (var item in Ustencils2)
+                foreach (string item in Ustencils2)
                 {
                     Console.WriteLine(item);
                 }
                 Console.WriteLine("ID des Ingredients");
-                foreach (var item in ListIngredients)
+                foreach (string item in ListIngredients)
                 {
                     Console.WriteLine(item);
                 }
-                foreach (var item in Ustencils2)
+                foreach (string item in Ustencils2)
                 {
                     Dish dish = new Dish();
                     Ustencils.Add(dish);
