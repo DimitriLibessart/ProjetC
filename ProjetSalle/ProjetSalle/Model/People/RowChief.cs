@@ -11,6 +11,11 @@ namespace ProjetSalle.Model.People
    public class RowChief
 
     {
+        private void OnPlaceClient(object client, EventHandler e)
+        {
+
+        }
+
             public void PlaceClient()
             {
             }

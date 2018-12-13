@@ -10,8 +10,9 @@ namespace ProjetSalle.Model.People
 {
    public class HotelManager
     {
-        public delegate void PlaceClient_EventHandler(Object Client, EventArgs e);
+        public delegate void PlaceClient_EventHandler(Object sender, EventArgs e);
         public event PlaceClient_EventHandler PlaceClient;
+
         public void AccueilClient()
         {
             Console.WriteLine("Maitre d'hôtel : Bonjour Monsieur quel est votre nom ? Avez vous une reservation ? ");
@@ -90,7 +91,8 @@ namespace ProjetSalle.Model.People
                 }
              }
 
-         
-        }       
+           
+        } 
+        sender.PlaceClient += new PlaceClient_EventHandler(AssignerTable);
     }
 }
