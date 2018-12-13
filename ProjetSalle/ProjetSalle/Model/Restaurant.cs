@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -171,11 +172,56 @@ namespace ProjetSalle.Model
          */ 
         private void AddRecettesToMenu()
         {
+<<<<<<< HEAD
             Menu.ListEntreeInMenu.AddRange( new List<String> {"Carottes", "Celeris", "Betraves"} );
+=======
+                List<string> NomEntree = null;
+                List<string> NomPlat = null;
+                List<string> NomDessert = null;
+>>>>>>> 6b089e4061ec84de71dd9113efa644b4839f0ba3
 
-            Menu.ListPlatInMenu.AddRange( new List<String> {"Lapin", "Ours", "cheval", "Poulet"} );
+                using (SqlConnection conn = new SqlConnection())
+                {
 
+                    conn.ConnectionString = "Server=ORDINATEUR-KISU\\SQLEXPRESS;Database=C#_Project;Trusted_Connection=true";
+                    conn.Open();
+                    SqlCommand command = new SqlCommand("SELECT Name FROM Recipe WHERE Category='Entree'", conn);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            NomEntree.Add(string.Format("{0} \n",
+                                reader[0]));
+                        }
+                    }
+                    SqlCommand command2 = new SqlCommand("SELECT Name FROM Recipe WHERE Category='Plat'", conn);
+                    using (SqlDataReader reader = command2.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            NomPlat.Add(string.Format("{0} \n",
+                                reader[0]));
+                        }
+                    }
+                    SqlCommand command3 = new SqlCommand("SELECT Name FROM Recipe WHERE Category='Dessert'", conn);
+                    using (SqlDataReader reader = command3.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            NomDessert.Add(string.Format("{0} \n",
+                                reader[0]));
+                        }
+                    }
+                }
+            Menu.ListPlatInMenu.AddRange(NomEntree);
+
+<<<<<<< HEAD
             Menu.ListDessertInMenu.AddRange( new List<String> {"Chocolat", "Glace", "Gauffre", "Crepes", "Cafe"} );
+=======
+            Menu.ListPlatInMenu.AddRange(NomPlat);
+
+            Menu.ListPlatInMenu.AddRange(NomDessert);
+>>>>>>> 6b089e4061ec84de71dd9113efa644b4839f0ba3
         }
 
         /*
@@ -214,11 +260,19 @@ namespace ProjetSalle.Model
                 tmpGrp.IDGroup = GroupeNumber;
                 tmpGrp.ListCustomer.Add(new Customer() {
                     ID = GroupeNumber+i,
+<<<<<<< HEAD
                     Command = new List<String>{
                         Menu.ListEntreeInMenu[entreeSelect],
                         Menu.ListPlatInMenu[platSelect],
                         Menu.ListDessertInMenu[desertSelect]
                     }
+=======
+                    Command = {
+                                Menu.ListEntreeInMenu[Command_entree],
+                                Menu.ListPlatInMenu[Command_plat],
+                                Menu.ListDessertInMenu[Command_Dessert]
+                              }
+>>>>>>> 6b089e4061ec84de71dd9113efa644b4839f0ba3
                 });
                 tmpGrp.NumberOfCustomer = tmpGrp.ListCustomer.Count;
             }
@@ -226,10 +280,15 @@ namespace ProjetSalle.Model
             GroupeNumber += 10;
 
             //Add the groupe created to the list of Clients groups
+<<<<<<< HEAD
             ListNewClients.Add(tmpGrp);
 
             Console.WriteLine("New Clients has arrived \nIls sont : " + tmpGrp.NumberOfCustomer + "\n");
+=======
+            ListNewClients.Add(tmpGrp); 
+>>>>>>> 6b089e4061ec84de71dd9113efa644b4839f0ba3
         }
+
 
         // If no instance of the Restaurant, then, create one
         public static Restaurant Instance

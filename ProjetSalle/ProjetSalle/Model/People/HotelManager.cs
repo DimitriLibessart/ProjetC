@@ -88,11 +88,7 @@ namespace ProjetSalle.Model.People
             foreach(Customer customer in customers.ListCustomer)
             {
                 Restaurant.Instance.Benefices += 20;
-                
-
             }
         }
-
     }
-
 }
