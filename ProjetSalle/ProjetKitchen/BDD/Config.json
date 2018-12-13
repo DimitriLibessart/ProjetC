@@ -1,0 +1,87 @@
+{
+  "Config": {
+    "KitchenConf": {
+      "Cuisiner": 6,
+      "CommisCuisine": 2,
+      "Plongeur": 1
+    },
+    //All the Actuals Commands of the restaurant
+    "CommandsRestaurant": {
+      //Split the commands of the rooms
+      //Commands for the Room Number 1
+      "Salle1": {
+        //List of the commands by table
+        "Command1": {
+          //Command Table Number
+          "TableNumber": "1",
+          //List of the command on the table
+          "CommandsList": {
+            //Command Client 1
+            "Client1": {
+              "Entree": "Veloute de champignons",
+              "Plat": "Boeuf saute au piment d'espelette",
+              "Dessert": "Brownies"
+            },
+            //Command Client 2
+            "Client2": {
+              "Entree": "Veloute de carottes au cumin",
+              "Plat": "Supreme de pintade au caramel au beurre sale",
+              "Dessert": "Creme brulee"
+            }
+          }
+        },
+
+        //Another Command
+        "Command2": {
+          "TableNumber": "2",
+          "CommandsList": {
+            "Client1": {
+              "Entree": "Tarte au saumon fume",
+              "Plat": "Supreme de pintade au caramel au beurre sale",
+              "Dessert": "Cake aux pepites de chocolat"
+            },
+            "Client2": {
+              "Entree": "Veloute de carottes au cumin",
+              "Plat": "Boeuf saute au piment d'espelette",
+              "Dessert": "Brownies"
+            }
+          }
+        }
+      },
+
+      //Commands for the Room Number 2
+      "Salle2": {
+        "Command1": {
+          "TableNumber": "1",
+          "CommandsList": {
+            "Client1": {
+              "Entree": "Roulade de saumon fume aux asperges, sauce crevettes et chevre frais",
+              "Plat": "Risotto aux noix",
+              "Dessert": "Brownies"
+            },
+            "Client2": {
+              "Entree": "Tarte au saumon fume",
+              "Plat": "Souffle de la mer",
+              "Dessert": "Creme brulee"
+            }
+          }
+        },
+        "Command2": {
+          "TableNumber": "2",
+          "CommandsList": {
+            "Client1": {
+              "Entree": "Veloute de carottes au cumin",
+              "Plat": "Supreme de pintade au caramel au beurre sale",
+              "Dessert": "Cake aux pepites de chocolat"
+            },
+            "Client2": {
+              "Entree": "Verrine avocat-truite fumee",
+              "Plat": "Boeuf saute au piment d'espelette",
+              "Dessert": "Verrine de framboises"
+            }
+          }
+        }
+      }
+    }
+  }
+}
