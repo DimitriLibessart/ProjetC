@@ -9,8 +9,12 @@ namespace ProjetSalle.Controller
 {
     class Program
     {
+        public Controller Controller { get; set; }
+
         static void Main(string[] args)
         {
+            Controller controller = new Controller();
+            
             /*
            // Controller controller;
 
