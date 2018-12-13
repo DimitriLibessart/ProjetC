@@ -15,15 +15,25 @@ namespace ProjetSalle.Model.People
 
         public HotelManager()
         {
+
+            //Initialisation of the availables tables
+            TableAvaible = new List<Table>();
+
+            PlacementClient();
+
+            /*
             //if new client arrived then verify that tables are available
             Thread verifTableDispo = new Thread(new ThreadStart(PlacementClient));
+
             verifTableDispo.Start();
+            */
         }
 
         //Regarde si des clients sont en attente et cherche à les placer
         public void PlacementClient()
         {
-            if(Restaurant.Instance.ListNewClients.Count != 0)
+            List<CustomerGroup> newClients = Restaurant.Instance.ListNewClients;
+            if (newClients != null)
             {
                 Console.WriteLine("Recherche de tables dispo pour les nouveau clients\n");
                 GetTableLibre();
@@ -31,9 +41,9 @@ namespace ProjetSalle.Model.People
                 if (TableAvaible.Count != 0)
                 {
                     Console.WriteLine("Recherche de places pour les clients\n");
-                    foreach(CustomerGroup customers in Restaurant.Instance.ListNewClients)
+                    foreach(CustomerGroup customers in newClients)
                     {
-                        try 
+                        if(TableAvaible.Find(x => x.CapaciteTable <= customers.NumberOfCustomer) != null) 
                         {
                             Table table = TableAvaible.Find(x => x.CapaciteTable <= customers.NumberOfCustomer);
                             if(table != null)
@@ -44,7 +54,7 @@ namespace ProjetSalle.Model.People
                                 Restaurant.Instance.ListNewClients.Remove(customers);
                             }
                         }
-                        catch
+                        else
                         {
                             Console.WriteLine("Pas de place disponible pour le groupe\n");
                         }
@@ -55,13 +65,19 @@ namespace ProjetSalle.Model.People
                     Console.WriteLine("Ils n'y a plus de table disponnible, les clients attendent...\n");
                 }
             }
-            Thread.Sleep(10000);
+            Thread.Sleep(1000);
         }
         // Get the list of tables availables in Restaurant
         private void GetTableLibre(){
+            Console.WriteLine("Recherche de tables libre");
 
-            for (int i = 1; i <= Restaurant.Instance.ListPiece.Count; i++){
-                TableAvaible.Add(Restaurant.Instance.ListPiece[i].ListTable.Find(x => x.StatusTable == EnumStatus.Ready));  
+            foreach(Piece piece in Restaurant.Instance.ListPiece)
+            {
+                foreach (Table table in piece.ListTable.FindAll(x => x.StatusTable == EnumStatus.Clean))
+                {
+                    Console.WriteLine("La table " + table.NumTable + " de la salle " + piece.IDPiece + " est libre\n");
+                    TableAvaible.Add(table);
+                }
             }
         }
 

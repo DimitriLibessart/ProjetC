@@ -1,4 +1,5 @@
 
+
 public class Rootobject
 {
     public Config Config { get; set; }
@@ -15,3 +16,4 @@ public class Restaurantconf
     public int Server { get; set; }
     public int RoomClerk { get; set; }
 }
+

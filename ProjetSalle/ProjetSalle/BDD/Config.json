@@ -1,9 +1,9 @@
 {
   "Config": {
     "RestaurantConf": {
-      "RowChief": 2, //Chefs de rang
-      "Server": 2, //Serveurs
-      "RoomClerk": 2 //Commis Cuisine
+      "RowChief": 2,
+      "Server": 2,
+      "RoomClerk": 2
     }
   }
 }

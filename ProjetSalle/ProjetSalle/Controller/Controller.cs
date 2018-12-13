@@ -15,7 +15,6 @@ namespace ProjetSalle.Controller
 
         public Controller()
         {
-            Console.WriteLine("Preparation de la Salle à manger du Restaurant\n");
             Restaurant = Restaurant.Instance;
 
             Restaurant.InitRestaurant();

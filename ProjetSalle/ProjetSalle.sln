@@ -7,12 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetSalle", "ProjetSalle\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetSalleTests", "ProjetSalleTests\ProjetSalleTests.csproj", "{9F938B42-B796-46AE-BB3D-80F05CDAFD47}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config_Folder", "Config_Folder", "{55FCA47E-0056-4719-9796-12F6BEB68179}"
-	ProjectSection(SolutionItems) = preProject
-		Commands.json = Commands.json
-		Config.json = Config.json
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetKitchen", "ProjetKitchen\ProjetKitchen.csproj", "{62AC93BD-1126-495D-8943-9BC62769C053}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetKitchenTest", "ProjetKitchenTest\ProjetKitchenTest.csproj", "{7AD86B1D-F862-47C1-B3C5-5219BDBCCB25}"
