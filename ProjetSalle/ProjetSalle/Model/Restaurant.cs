@@ -162,7 +162,7 @@ namespace ProjetSalle.Model
             NewClientThreadFunction();
 
             // Le Maitre d'Hotel lance la journée
-            Restaurant.Instance.HotelManager = new HotelManager();
+            Restaurant.Instance.HotelManager = HotelManager.Instance;
 
             Console.Read();
 
