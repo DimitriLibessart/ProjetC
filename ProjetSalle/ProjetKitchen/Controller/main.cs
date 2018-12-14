@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProjetKitchen.Controller
 {
-    class Main
+    class Program
     {
-        Main(string[] args)
+        public Controller Controller { get; set; }
+
+        static void Main(string[] args)
         {
             // Display the number of command line arguments:
             System.Console.WriteLine("Lancement De la Simulation\n\n");

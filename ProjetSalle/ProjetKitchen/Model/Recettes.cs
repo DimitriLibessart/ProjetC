@@ -12,6 +12,7 @@ namespace ProjetKitchen.Model
         public List<Dish> Ustencils { get; set; }
 
         public int TimeToRealize { get; set; }
+        public object ListIngredients { get; internal set; }
 
         public Recettes()
         {

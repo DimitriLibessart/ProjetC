@@ -11,9 +11,14 @@ namespace ProjetSalle.Model.People
 {
     class HotelManager
     {
+        private static HotelManager _instance;
+        static readonly object instanceLock = new object();
+
         public List<Table> TableAvaible { get; set; }
 
-        public HotelManager()
+        private HotelManager() { }
+
+        public void TheHotelManager()
         {
 
             //Initialisation of the availables tables
@@ -89,6 +94,23 @@ namespace ProjetSalle.Model.People
             foreach(Customer customer in customers.ListCustomer)
             {
                 Restaurant.Instance.Benefices += 20;
+            }
+        }
+
+        // If no instance of the kitchen, then, create one
+        public static HotelManager Instance
+        {
+            get
+            {
+                if (_instance == null) //Les locks prennent du temps, il est préférable de vérifier d'abord la nullité de l'instance.
+                {
+                    lock (instanceLock)
+                    {
+                        if (_instance == null) //on vérifie encore, au cas où l'instance aurait été créée entretemps.
+                            _instance = new HotelManager();
+                    }
+                }
+                return _instance;
             }
         }
     }

@@ -38,6 +38,13 @@ namespace ProjetKitchen.Model
             //DirtyDishies.add(); 
         }
 
+        private void GetVaisselle()
+        {
+            //Get the Dishies List from the JSON or BDD
+            //DirtyDishies = 
+
+        }
+
         private void Laver(String typeElement, List<Dish> aLaver)
         {
 
@@ -45,7 +52,7 @@ namespace ProjetKitchen.Model
             {
                 case "Vaiselle":
 
-                    aLaver = GetDishiestoDishWasher(aLaver);
+                    GetDishiesToDishWasher(aLaver);
                     break; 
 
                 case "Linge":
@@ -61,14 +68,17 @@ namespace ProjetKitchen.Model
             }
         }
 
-        private void GetVaisselle()
+        private void Use(List<Dish> DirtyDishies)
         {
-            //Get the Dishies List from the JSON or BDD
-            //DirtyDishies = 
-
+            throw new NotImplementedException();
         }
 
-        private LIst<Dish> GetDishiestoDishWasher(List<Dish> DirtyDishies)
+        private void WashUtensils(Dish utencil)
+        {
+            throw new NotImplementedException();
+        }
+
+        private List<Dish> GetDishiesToDishWasher(List<Dish> DirtyDishies)
         {
             int fouchettes = 24, cuillères = 24, couteaux = 24, assietes = 24, verres = 24;
             int contenance = fouchettes + cuillères + couteaux + assietes + verres;
@@ -76,7 +86,28 @@ namespace ProjetKitchen.Model
             {
                 foreach(Dish dish in DirtyDishies)
                 {
-                    if()
+                    switch (dish.Category)
+                    {
+                        case "Fouchettes":
+                            fouchettes--;
+                            break;
+
+                        case "Cuilleres":
+                            cuillères--;
+                            break;
+
+                        case "Couteaux":
+                            couteaux--;
+                            break;
+
+                        case "Assietes":
+                            assietes--;
+                            break;
+
+                        case "Verres":
+                            verres--;
+                            break;
+                    }
                 }
             }
             return DirtyDishies;

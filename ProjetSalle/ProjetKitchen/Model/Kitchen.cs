@@ -34,6 +34,10 @@ namespace ProjetKitchen.Model
             //Get the Config File
             Config = new Config();
 
+            Ustencils = new List<Dish>();
+
+            RecettesList = new List<Recettes>();
+
             //Recup the List of Ustencils in the Database (Armoire)
             GetAllUstencils();
 
@@ -43,25 +47,34 @@ namespace ProjetKitchen.Model
             //Get the number of Cook in Config file and instanciate them with an ID
             for (int c =0; c<= Config.KitchenConf.Cuisiner; c++)
             {
-                CookList.Add(new Cooker() { ID = c });
+                CookList.Add(new Cooker() {
+                    ID = c,
+                    TravailList = new List<Recettes>()
+                });
             }
 
             //Get the number of Commis Kitchen in Config file and instanciate them with an ID
             for (int cc =0; cc <= Config.KitchenConf.CommisCuisine; cc++)
             {
-                CommisKitchenList.Add(new CommisKitchen() { ID = cc });
+                CommisKitchenList.Add(new CommisKitchen() {
+                    ID = cc,
+                    TravailList = new List<Recettes>()
+                });
             }
 
             //Get the number of Plongeur in Config file and instanciate them with an ID
             for (int p =0; p <= Config.KitchenConf.Plongeur; p++)
             {
-                PlongeurList.Add(new Plongeur() { ID = p });
+                PlongeurList.Add(new Plongeur() {
+                    ID = p,
+                    DirtyDishies = new List<Dish>()
+                });
             }
         }
 
         private void GetAllRecettesFromMenu()
         {
-            List<String> Listeeeeee = new List<String> { "test1", "test2", "test3" };
+            List<String> Listeeeeee = new List<String> { "Recette1", "Recette2", "Recette3" };
 
             foreach(String recetteInList in Listeeeeee)
             {
@@ -69,7 +82,7 @@ namespace ProjetKitchen.Model
                 {
                     RecetteName = recetteInList,
                     TimeToRealize = 12,
-                    ListIngredients = { "Tomates", "Carottes", "Olives" , "Salade"},
+                    ListIngredients = new List<String>{ "Tomates", "Carottes", "Olives" , "Salade"},
                     Ustencils = {
                         Ustencils.Find(x => x.Name == "Couteau"),
                         Ustencils.Find(x => x.Name == "Fourchette")
