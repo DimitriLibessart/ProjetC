@@ -11,6 +11,7 @@ namespace ProjetSalle.Controller
     class Controller
     { 
         public Model.Restaurant Restaurant { get; set; }
+
         public View.Displayer Displayer { get; }
 
         public Controller()

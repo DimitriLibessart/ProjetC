@@ -172,18 +172,14 @@ namespace ProjetSalle.Model
          */ 
         private void AddRecettesToMenu()
         {
-<<<<<<< HEAD
-            Menu.ListEntreeInMenu.AddRange( new List<String> {"Carottes", "Celeris", "Betraves"} );
-=======
-                List<string> NomEntree = null;
-                List<string> NomPlat = null;
-                List<string> NomDessert = null;
->>>>>>> 6b089e4061ec84de71dd9113efa644b4839f0ba3
+                List<string> NomEntree = new List<string>();
+                List<string> NomPlat = new List<string>();
+                List<string> NomDessert = new List<string>();
 
-                using (SqlConnection conn = new SqlConnection())
+            using (SqlConnection conn = new SqlConnection())
                 {
 
-                    conn.ConnectionString = "Server=ORDINATEUR-KISU\\SQLEXPRESS;Database=C#_Project;Trusted_Connection=true";
+                    conn.ConnectionString = "Server=DESKTOP-SNAIM3C;Database=C#_Project;Trusted_Connection=true";
                     conn.Open();
                     SqlCommand command = new SqlCommand("SELECT Name FROM Recipe WHERE Category='Entree'", conn);
                     using (SqlDataReader reader = command.ExecuteReader())
@@ -213,33 +209,12 @@ namespace ProjetSalle.Model
                         }
                     }
                 }
-            Menu.ListPlatInMenu.AddRange(NomEntree);
+            Menu.ListEntreeInMenu.AddRange(NomEntree);
 
-<<<<<<< HEAD
-            Menu.ListDessertInMenu.AddRange( new List<String> {"Chocolat", "Glace", "Gauffre", "Crepes", "Cafe"} );
-=======
             Menu.ListPlatInMenu.AddRange(NomPlat);
 
-            Menu.ListPlatInMenu.AddRange(NomDessert);
->>>>>>> 6b089e4061ec84de71dd9113efa644b4839f0ba3
+            Menu.ListDessertInMenu.AddRange(NomDessert);
         }
-
-        /*
-        // Method that add new groupes every n times
-        private void AddNewClientEveryTimes()
-        {
-            //Thread newClient = new Thread(new ThreadStart(NewClientThreadFunction));
-
-            // Create a timer
-            myTimer = new System.Timers.Timer();
-            // Tell the timer what to do when it elapses
-            myTimer.Elapsed += new ElapsedEventHandler(NewClientThreadFunction);
-            // Set it to go off every five seconds
-            myTimer.Interval = rnd.Next(1000,1000000);
-            // And start it        
-            myTimer.Enabled = true;
-        }
-        */
 
         //Thread That Create group of clients
         private void NewClientThreadFunction()
@@ -260,19 +235,11 @@ namespace ProjetSalle.Model
                 tmpGrp.IDGroup = GroupeNumber;
                 tmpGrp.ListCustomer.Add(new Customer() {
                     ID = GroupeNumber+i,
-<<<<<<< HEAD
                     Command = new List<String>{
                         Menu.ListEntreeInMenu[entreeSelect],
                         Menu.ListPlatInMenu[platSelect],
                         Menu.ListDessertInMenu[desertSelect]
                     }
-=======
-                    Command = {
-                                Menu.ListEntreeInMenu[Command_entree],
-                                Menu.ListPlatInMenu[Command_plat],
-                                Menu.ListDessertInMenu[Command_Dessert]
-                              }
->>>>>>> 6b089e4061ec84de71dd9113efa644b4839f0ba3
                 });
                 tmpGrp.NumberOfCustomer = tmpGrp.ListCustomer.Count;
             }
@@ -280,13 +247,9 @@ namespace ProjetSalle.Model
             GroupeNumber += 10;
 
             //Add the groupe created to the list of Clients groups
-<<<<<<< HEAD
             ListNewClients.Add(tmpGrp);
 
             Console.WriteLine("New Clients has arrived \nIls sont : " + tmpGrp.NumberOfCustomer + "\n");
-=======
-            ListNewClients.Add(tmpGrp); 
->>>>>>> 6b089e4061ec84de71dd9113efa644b4839f0ba3
         }
 
 
