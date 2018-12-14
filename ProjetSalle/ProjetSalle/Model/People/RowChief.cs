@@ -62,6 +62,7 @@ namespace ProjetSalle.Model.People
         public void SendKitchen()
         {
             foreach (string str in CommandsTable)
+            {
                 try
                 {
                     TcpClient tcpclnt = new TcpClient();

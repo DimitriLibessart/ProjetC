@@ -67,6 +67,7 @@ namespace ProjetSalle.Model.People
             }
             Thread.Sleep(1000);
         }
+
         // Get the list of tables availables in Restaurant
         private void GetTableLibre(){
             Console.WriteLine("Recherche de tables libre");
